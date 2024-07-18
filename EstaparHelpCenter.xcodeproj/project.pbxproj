@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223D303C2C49847C00071817 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D303B2C49847C00071817 /* APIProvider.swift */; };
+		223D303E2C49849000071817 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D303D2C49849000071817 /* APITarget.swift */; };
+		223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30412C4984ED00071817 /* HelpCenterService.swift */; };
 		223E61162C4971FF00465130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61152C4971FF00465130 /* AppDelegate.swift */; };
 		223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61172C4971FF00465130 /* SceneDelegate.swift */; };
 		223E611F2C49720100465130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223E611E2C49720100465130 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		163146B2BBAA89E16510D875 /* Pods_EstaparHelpCenterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstaparHelpCenterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		193475342AAEEA56CEA4FCD2 /* Pods-EstaparHelpCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterTests.release.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterTests/Pods-EstaparHelpCenterTests.release.xcconfig"; sourceTree = "<group>"; };
+		223D303B2C49847C00071817 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		223D303D2C49849000071817 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		223D30412C4984ED00071817 /* HelpCenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterService.swift; sourceTree = "<group>"; };
 		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		223D30362C49818D00071817 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				223D30402C4984CB00071817 /* Services */,
+				223D303A2C49846400071817 /* Setup */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		223D303A2C49846400071817 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				223D303B2C49847C00071817 /* APIProvider.swift */,
+				223D303D2C49849000071817 /* APITarget.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		223D30402C4984CB00071817 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				223D30412C4984ED00071817 /* HelpCenterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		223E61092C4971FF00465130 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +184,7 @@
 		223E61462C49778500465130 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				223D30362C49818D00071817 /* API */,
 				223E61472C49778A00465130 /* Coordinator */,
 			);
 			path = Core;
@@ -209,7 +242,6 @@
 				F468921CF5A4D40B5D5C3094 /* Pods-EstaparHelpCenterUITests.debug.xcconfig */,
 				69595F39979AE60313CBC01F /* Pods-EstaparHelpCenterUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -432,10 +464,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */,
 				223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */,
 				223E61162C4971FF00465130 /* AppDelegate.swift in Sources */,
+				223D303C2C49847C00071817 /* APIProvider.swift in Sources */,
 				223E61492C4977A400465130 /* CoordinatorProtocol.swift in Sources */,
 				223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */,
+				223D303E2C49849000071817 /* APITarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EstaparHelpCenter/Support Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Estapar;
@@ -634,6 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EstaparHelpCenter/Support Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Estapar;
