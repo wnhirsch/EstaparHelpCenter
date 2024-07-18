@@ -10,13 +10,27 @@
 		223D303C2C49847C00071817 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D303B2C49847C00071817 /* APIProvider.swift */; };
 		223D303E2C49849000071817 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D303D2C49849000071817 /* APITarget.swift */; };
 		223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30412C4984ED00071817 /* HelpCenterService.swift */; };
+		223D30442C498CC500071817 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30432C498CC500071817 /* HomeCoordinator.swift */; };
+		223D30462C498CCD00071817 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30452C498CCD00071817 /* HomeView.swift */; };
+		223D30482C498CD900071817 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30472C498CD900071817 /* HomeViewController.swift */; };
+		223D304F2C498DD300071817 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30492C498DD300071817 /* Loadable.swift */; };
+		223D30502C498DD300071817 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304A2C498DD300071817 /* LoadingView.swift */; };
+		223D30512C498DD300071817 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304C2C498DD300071817 /* CodeView.swift */; };
+		223D30522C498DD300071817 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304D2C498DD300071817 /* ReusableView.swift */; };
+		223D30552C498E7600071817 /* SizePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30542C498E7600071817 /* SizePattern.swift */; };
+		223D30572C4993EC00071817 /* ColorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30562C4993EC00071817 /* ColorPattern.swift */; };
+		223D30662C499B6D00071817 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D305D2C499B6D00071817 /* Inter-Bold.ttf */; };
+		223D30672C499B6D00071817 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D305E2C499B6D00071817 /* Inter-Medium.ttf */; };
+		223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D30602C499B6D00071817 /* Inter-SemiBold.ttf */; };
+		223D306E2C499D8000071817 /* FontPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D306D2C499D8000071817 /* FontPattern.swift */; };
+		223D30702C49A67200071817 /* HelpCenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */; };
 		223E61162C4971FF00465130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61152C4971FF00465130 /* AppDelegate.swift */; };
 		223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61172C4971FF00465130 /* SceneDelegate.swift */; };
 		223E611F2C49720100465130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223E611E2C49720100465130 /* Assets.xcassets */; };
 		223E612D2C49720100465130 /* EstaparHelpCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E612C2C49720100465130 /* EstaparHelpCenterTests.swift */; };
 		223E61372C49720100465130 /* EstaparHelpCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61362C49720100465130 /* EstaparHelpCenterUITests.swift */; };
 		223E61392C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61382C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift */; };
-		223E61492C4977A400465130 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61482C4977A400465130 /* CoordinatorProtocol.swift */; };
+		223E61492C4977A400465130 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61482C4977A400465130 /* Coordinator.swift */; };
 		223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E614A2C4977CA00465130 /* AppCoordinator.swift */; };
 		54155D0F01FA1AA6B42F334B /* Pods_EstaparHelpCenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6903935565F3E31AE554275 /* Pods_EstaparHelpCenterUITests.framework */; };
 		A8062E7C7C2E4EE82D9180C1 /* Pods_EstaparHelpCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E505BB9769435BF1E2F2BCFC /* Pods_EstaparHelpCenter.framework */; };
@@ -46,6 +60,20 @@
 		223D303B2C49847C00071817 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		223D303D2C49849000071817 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
 		223D30412C4984ED00071817 /* HelpCenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterService.swift; sourceTree = "<group>"; };
+		223D30432C498CC500071817 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		223D30452C498CCD00071817 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		223D30472C498CD900071817 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		223D30492C498DD300071817 /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		223D304A2C498DD300071817 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		223D304C2C498DD300071817 /* CodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		223D304D2C498DD300071817 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		223D30542C498E7600071817 /* SizePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePattern.swift; sourceTree = "<group>"; };
+		223D30562C4993EC00071817 /* ColorPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPattern.swift; sourceTree = "<group>"; };
+		223D305D2C499B6D00071817 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		223D305E2C499B6D00071817 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		223D30602C499B6D00071817 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		223D306D2C499D8000071817 /* FontPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPattern.swift; sourceTree = "<group>"; };
+		223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCoordinator.swift; sourceTree = "<group>"; };
 		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +84,7 @@
 		223E61322C49720100465130 /* EstaparHelpCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EstaparHelpCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61362C49720100465130 /* EstaparHelpCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstaparHelpCenterUITests.swift; sourceTree = "<group>"; };
 		223E61382C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstaparHelpCenterUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		223E61482C4977A400465130 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		223E61482C4977A400465130 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		223E614A2C4977CA00465130 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		265FCED561AA4E75E0D5F623 /* Pods-EstaparHelpCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenter.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter.debug.xcconfig"; sourceTree = "<group>"; };
 		34C4A9312D2C1E0EB3A97C57 /* Pods-EstaparHelpCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterTests.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterTests/Pods-EstaparHelpCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +149,46 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		223D304B2C498DD300071817 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				223D30492C498DD300071817 /* Loadable.swift */,
+				223D304A2C498DD300071817 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		223D304E2C498DD300071817 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				223D30582C4997A300071817 /* Patterns */,
+				223D304B2C498DD300071817 /* Loading */,
+				223D304C2C498DD300071817 /* CodeView.swift */,
+				223D304D2C498DD300071817 /* ReusableView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		223D30582C4997A300071817 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				223D30562C4993EC00071817 /* ColorPattern.swift */,
+				223D30542C498E7600071817 /* SizePattern.swift */,
+				223D306D2C499D8000071817 /* FontPattern.swift */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		223D30592C499B2000071817 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				223D305E2C499B6D00071817 /* Inter-Medium.ttf */,
+				223D30602C499B6D00071817 /* Inter-SemiBold.ttf */,
+				223D305D2C499B6D00071817 /* Inter-Bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		223E61092C4971FF00465130 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +243,7 @@
 		223E61452C49776D00465130 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				223D30592C499B2000071817 /* Font */,
 				223E611E2C49720100465130 /* Assets.xcassets */,
 				223E61232C49720100465130 /* Info.plist */,
 			);
@@ -186,6 +255,7 @@
 			children = (
 				223D30362C49818D00071817 /* API */,
 				223E61472C49778A00465130 /* Coordinator */,
+				223D304E2C498DD300071817 /* UI */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -193,8 +263,8 @@
 		223E61472C49778A00465130 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				223E61482C4977A400465130 /* CoordinatorProtocol.swift */,
 				223E614A2C4977CA00465130 /* AppCoordinator.swift */,
+				223E61482C4977A400465130 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -211,6 +281,9 @@
 		223E614D2C49785900465130 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				223D30432C498CC500071817 /* HomeCoordinator.swift */,
+				223D30452C498CCD00071817 /* HomeView.swift */,
+				223D30472C498CD900071817 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -218,6 +291,7 @@
 		223E614E2C49785F00465130 /* HelpCenter */ = {
 			isa = PBXGroup;
 			children = (
+				223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */,
 			);
 			path = HelpCenter;
 			sourceTree = "<group>";
@@ -353,6 +427,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223D30662C499B6D00071817 /* Inter-Bold.ttf in Resources */,
+				223D30672C499B6D00071817 /* Inter-Medium.ttf in Resources */,
+				223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */,
 				223E611F2C49720100465130 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,11 +541,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223D30702C49A67200071817 /* HelpCenterCoordinator.swift in Sources */,
+				223D30462C498CCD00071817 /* HomeView.swift in Sources */,
 				223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */,
 				223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */,
 				223E61162C4971FF00465130 /* AppDelegate.swift in Sources */,
+				223D30552C498E7600071817 /* SizePattern.swift in Sources */,
 				223D303C2C49847C00071817 /* APIProvider.swift in Sources */,
-				223E61492C4977A400465130 /* CoordinatorProtocol.swift in Sources */,
+				223D30522C498DD300071817 /* ReusableView.swift in Sources */,
+				223D30502C498DD300071817 /* LoadingView.swift in Sources */,
+				223D30512C498DD300071817 /* CodeView.swift in Sources */,
+				223D30482C498CD900071817 /* HomeViewController.swift in Sources */,
+				223D30572C4993EC00071817 /* ColorPattern.swift in Sources */,
+				223D306E2C499D8000071817 /* FontPattern.swift in Sources */,
+				223E61492C4977A400465130 /* Coordinator.swift in Sources */,
+				223D30442C498CC500071817 /* HomeCoordinator.swift in Sources */,
+				223D304F2C498DD300071817 /* Loadable.swift in Sources */,
 				223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */,
 				223D303E2C49849000071817 /* APITarget.swift in Sources */,
 			);

@@ -10,15 +10,18 @@ import UIKit
 class AppCoordinator {
 
     private let window: UIWindow
-    private(set) var childCoordinator: CoordinatorProtocol?
+    var navigationController = UINavigationController()
+    private(set) var childCoordinator: Coordinator?
 
     init(window: UIWindow) {
         self.window = window
     }
 
     func start() {
-        // TODO: Go to Home
-        window.rootViewController = UIViewController()
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.start()
+        childCoordinator = homeCoordinator
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 }
