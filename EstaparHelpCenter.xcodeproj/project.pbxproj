@@ -15,6 +15,9 @@
 		223E61392C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61382C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift */; };
 		223E61492C4977A400465130 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61482C4977A400465130 /* CoordinatorProtocol.swift */; };
 		223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E614A2C4977CA00465130 /* AppCoordinator.swift */; };
+		54155D0F01FA1AA6B42F334B /* Pods_EstaparHelpCenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6903935565F3E31AE554275 /* Pods_EstaparHelpCenterUITests.framework */; };
+		A8062E7C7C2E4EE82D9180C1 /* Pods_EstaparHelpCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E505BB9769435BF1E2F2BCFC /* Pods_EstaparHelpCenter.framework */; };
+		F9F31DD01E48C50612785BCB /* Pods_EstaparHelpCenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 163146B2BBAA89E16510D875 /* Pods_EstaparHelpCenterTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		163146B2BBAA89E16510D875 /* Pods_EstaparHelpCenterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstaparHelpCenterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		193475342AAEEA56CEA4FCD2 /* Pods-EstaparHelpCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterTests.release.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterTests/Pods-EstaparHelpCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		223E61382C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstaparHelpCenterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		223E61482C4977A400465130 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		223E614A2C4977CA00465130 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		265FCED561AA4E75E0D5F623 /* Pods-EstaparHelpCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenter.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter.debug.xcconfig"; sourceTree = "<group>"; };
+		34C4A9312D2C1E0EB3A97C57 /* Pods-EstaparHelpCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterTests.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterTests/Pods-EstaparHelpCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69595F39979AE60313CBC01F /* Pods-EstaparHelpCenterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterUITests.release.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterUITests/Pods-EstaparHelpCenterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		701784BF7E6BBFF0213AF25F /* Pods-EstaparHelpCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenter.release.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter.release.xcconfig"; sourceTree = "<group>"; };
+		A6903935565F3E31AE554275 /* Pods_EstaparHelpCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstaparHelpCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E505BB9769435BF1E2F2BCFC /* Pods_EstaparHelpCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstaparHelpCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F468921CF5A4D40B5D5C3094 /* Pods-EstaparHelpCenterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterUITests.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterUITests/Pods-EstaparHelpCenterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8062E7C7C2E4EE82D9180C1 /* Pods_EstaparHelpCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F31DD01E48C50612785BCB /* Pods_EstaparHelpCenterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54155D0F01FA1AA6B42F334B /* Pods_EstaparHelpCenterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				223E612B2C49720100465130 /* EstaparHelpCenterTests */,
 				223E61352C49720100465130 /* EstaparHelpCenterUITests */,
 				223E61132C4971FF00465130 /* Products */,
+				5D6926AB3F882EBC843B2856 /* Pods */,
+				4BCD6844131B374766FA8EA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +189,30 @@
 			path = HelpCenter;
 			sourceTree = "<group>";
 		};
+		4BCD6844131B374766FA8EA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E505BB9769435BF1E2F2BCFC /* Pods_EstaparHelpCenter.framework */,
+				163146B2BBAA89E16510D875 /* Pods_EstaparHelpCenterTests.framework */,
+				A6903935565F3E31AE554275 /* Pods_EstaparHelpCenterUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D6926AB3F882EBC843B2856 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				265FCED561AA4E75E0D5F623 /* Pods-EstaparHelpCenter.debug.xcconfig */,
+				701784BF7E6BBFF0213AF25F /* Pods-EstaparHelpCenter.release.xcconfig */,
+				34C4A9312D2C1E0EB3A97C57 /* Pods-EstaparHelpCenterTests.debug.xcconfig */,
+				193475342AAEEA56CEA4FCD2 /* Pods-EstaparHelpCenterTests.release.xcconfig */,
+				F468921CF5A4D40B5D5C3094 /* Pods-EstaparHelpCenterUITests.debug.xcconfig */,
+				69595F39979AE60313CBC01F /* Pods-EstaparHelpCenterUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223E613C2C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenter" */;
 			buildPhases = (
+				716FF1111B14B7FFF3DBB082 /* [CP] Check Pods Manifest.lock */,
 				223E610E2C4971FF00465130 /* Sources */,
 				223E610F2C4971FF00465130 /* Frameworks */,
 				223E61102C4971FF00465130 /* Resources */,
+				4E0357330196DA92942E273A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223E613F2C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenterTests" */;
 			buildPhases = (
+				F7110DA521BA1258CB76AB0D /* [CP] Check Pods Manifest.lock */,
 				223E61242C49720100465130 /* Sources */,
 				223E61252C49720100465130 /* Frameworks */,
 				223E61262C49720100465130 /* Resources */,
@@ -214,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223E61422C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenterUITests" */;
 			buildPhases = (
+				6BD33A2D59465C4843E40AF4 /* [CP] Check Pods Manifest.lock */,
 				223E612E2C49720100465130 /* Sources */,
 				223E612F2C49720100465130 /* Frameworks */,
 				223E61302C49720100465130 /* Resources */,
@@ -295,6 +340,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E0357330196DA92942E273A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BD33A2D59465C4843E40AF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EstaparHelpCenterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		716FF1111B14B7FFF3DBB082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EstaparHelpCenter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7110DA521BA1258CB76AB0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EstaparHelpCenterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		223E610E2C4971FF00465130 /* Sources */ = {
@@ -462,6 +593,7 @@
 		};
 		223E613D2C49720100465130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265FCED561AA4E75E0D5F623 /* Pods-EstaparHelpCenter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +627,7 @@
 		};
 		223E613E2C49720100465130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 701784BF7E6BBFF0213AF25F /* Pods-EstaparHelpCenter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -528,6 +661,7 @@
 		};
 		223E61402C49720100465130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C4A9312D2C1E0EB3A97C57 /* Pods-EstaparHelpCenterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +686,7 @@
 		};
 		223E61412C49720100465130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193475342AAEEA56CEA4FCD2 /* Pods-EstaparHelpCenterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,6 +711,7 @@
 		};
 		223E61432C49720100465130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F468921CF5A4D40B5D5C3094 /* Pods-EstaparHelpCenterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -598,6 +734,7 @@
 		};
 		223E61442C49720100465130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69595F39979AE60313CBC01F /* Pods-EstaparHelpCenterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
