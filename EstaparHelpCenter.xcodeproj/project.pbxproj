@@ -33,7 +33,7 @@
 		223D30832C49D97400071817 /* HelpCenterHomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */; };
 		223D30852C49DB5100071817 /* MoyaResponse+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30842C49DB5100071817 /* MoyaResponse+Map.swift */; };
 		223D308A2C4ADC8600071817 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30872C4ADC8600071817 /* String+Localizable.swift */; };
-		223D308D2C4ADC9000071817 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223D308C2C4ADC9000071817 /* Localizable.strings */; };
+		223D30932C4AE50300071817 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223D30922C4AE50300071817 /* Localizable.strings */; };
 		223E61162C4971FF00465130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61152C4971FF00465130 /* AppDelegate.swift */; };
 		223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61172C4971FF00465130 /* SceneDelegate.swift */; };
 		223E611F2C49720100465130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223E611E2C49720100465130 /* Assets.xcassets */; };
@@ -93,7 +93,7 @@
 		223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeCategoryCell.swift; sourceTree = "<group>"; };
 		223D30842C49DB5100071817 /* MoyaResponse+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+Map.swift"; sourceTree = "<group>"; };
 		223D30872C4ADC8600071817 /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
-		223D308E2C4ADCA300071817 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		223D30912C4AE50300071817 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		223D30882C4ADC8600071817 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				223D308C2C4ADC9000071817 /* Localizable.strings */,
+				223D30922C4AE50300071817 /* Localizable.strings */,
 				223D30872C4ADC8600071817 /* String+Localizable.swift */,
 			);
 			path = Strings;
@@ -497,7 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223D308D2C4ADC9000071817 /* Localizable.strings in Resources */,
+				223D30932C4AE50300071817 /* Localizable.strings in Resources */,
 				223D30662C499B6D00071817 /* Inter-Bold.ttf in Resources */,
 				223D30672C499B6D00071817 /* Inter-Medium.ttf in Resources */,
 				223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */,
@@ -675,10 +675,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		223D308C2C4ADC9000071817 /* Localizable.strings */ = {
+		223D30922C4AE50300071817 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				223D308E2C4ADCA300071817 /* pt-BR */,
+				223D30912C4AE50300071817 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
