@@ -11,13 +11,18 @@ import UIKit
 
 class HomeView: UIView, CodeView {
     
-    private let helpCenterButton: UIButton = {
+    private lazy var helpCenterButton: UIButton = {
         var filled = UIButton.Configuration.filled()
         filled.cornerStyle = .fixed
         filled.background.cornerRadius = .size10
         filled.baseBackgroundColor = .estaparPrimary
         filled.baseForegroundColor = .estaparWhite
-        filled.contentInsets = .init(top: .size10, leading: .size10, bottom: .size10, trailing: .size10)
+        filled.contentInsets = .init(
+            top: .size10,
+            leading: .size10,
+            bottom: .size10,
+            trailing: .size10
+        )
         
         var container = AttributeContainer()
         container.font = .estaparMedium(size: .font14)
@@ -25,7 +30,6 @@ class HomeView: UIView, CodeView {
         
         return UIButton(configuration: filled)
     }()
-    
     
     let helpCenterPublisher = PassthroughSubject<Void, Never>()
     
@@ -50,7 +54,11 @@ class HomeView: UIView, CodeView {
     
     func setupAdditionalConfiguration() {
         backgroundColor = .estaparWhite
-        helpCenterButton.addTarget(self, action: #selector(didTapHelpCenterButton), for: .touchUpInside)
+        helpCenterButton.addTarget(
+            self,
+            action: #selector(didTapHelpCenterButton),
+            for: .touchUpInside
+        )
     }
 
     @objc private func didTapHelpCenterButton() {

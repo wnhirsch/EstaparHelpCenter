@@ -22,7 +22,9 @@ class HomeCoordinator: Coordinator {
     }
     
     func showHelpCenter() {
-        let helpCenterCoordinator = HelpCenterCoordinator(navigationController: navigationController)
+        let helpCenterCoordinator = HelpCenterCoordinator(
+            navigationController: navigationController
+        )
         childCoordinators.append(helpCenterCoordinator)
         helpCenterCoordinator.start()
     }

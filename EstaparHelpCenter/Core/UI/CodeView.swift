@@ -6,12 +6,10 @@
 //
 
 public protocol CodeView {
-
     func buildViewHierarchy()
     func setupConstraints()
     func setupAdditionalConfiguration()
     func setupView()
-
 }
 
 public extension CodeView {
@@ -21,5 +19,4 @@ public extension CodeView {
         setupConstraints()
         setupAdditionalConfiguration()
     }
-
 }

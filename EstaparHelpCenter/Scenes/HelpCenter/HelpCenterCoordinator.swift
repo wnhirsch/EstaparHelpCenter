@@ -11,13 +11,21 @@ class HelpCenterCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    
+    var modalNavigationController = UINavigationController()
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
+        let vc = HelpCenterHomeViewController(viewModel: .init(coordinator: self))
+        modalNavigationController = UINavigationController(rootViewController: vc)
+        navigationController.present(modalNavigationController, animated: true, completion: nil)
+    }
+    
+    func startCategory(categoryId: String) {
         let vc = UIViewController()
-        navigationController.present(vc, animated: true)
+        modalNavigationController.pushViewController(vc, animated: true)
     }
 }

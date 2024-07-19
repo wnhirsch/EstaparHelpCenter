@@ -43,7 +43,7 @@ extension Loadable where Self: UIViewController {
 
         let loadingView = addLoadingView(subview: subview)
         loadingView.setup(message: message)
-        loadingView.alpha = .one
+        loadingView.alpha = 1
     }
 
     func hideLoading() {

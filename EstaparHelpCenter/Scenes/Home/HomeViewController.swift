@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     private let contentView: HomeView
-    private let coordinator: HomeCoordinator
+    private weak var coordinator: HomeCoordinator?
     
     private var cancellables = Set<AnyCancellable>()
 
@@ -36,18 +36,19 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
-        coordinator.showHelpCenter() // Initialize Help Center flow
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Initialize Help Center flow
+        coordinator?.showHelpCenter()
     }
     
     private func bind() {
         // Help Center Button clicked
         contentView.helpCenterPublisher.sink { [weak self] _ in
             guard let self = self else { return }
-            self.coordinator.showHelpCenter()
+            self.coordinator?.showHelpCenter()
         }.store(in: &cancellables)
     }
 }
