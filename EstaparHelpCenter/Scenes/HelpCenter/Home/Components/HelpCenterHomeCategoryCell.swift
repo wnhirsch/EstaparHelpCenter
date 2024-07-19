@@ -101,6 +101,6 @@ class HelpCenterHomeCategoryCell: UICollectionViewCell, CodeView {
     
     func setup(model: HelpCenterHomeModel.Category) {
         titleLabel.text = model.title
-        articlesLabel.text = "\(model.totalArticles) artigos"
+        articlesLabel.text = "helpcenter.home.articles".localized(model.totalArticles)
     }
 }

@@ -26,7 +26,7 @@ class HomeView: UIView, CodeView {
         
         var container = AttributeContainer()
         container.font = .estaparMedium(size: .font14)
-        filled.attributedTitle = AttributedString("Abrir Central de Ajuda", attributes: container)
+        filled.attributedTitle = AttributedString("home.button".localized, attributes: container)
         
         return UIButton(configuration: filled)
     }()

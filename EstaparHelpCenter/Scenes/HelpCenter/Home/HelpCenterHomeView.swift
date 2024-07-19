@@ -6,18 +6,19 @@
 //
 
 import Combine
+import Kingfisher
 import SnapKit
 import UIKit
 
 class HelpCenterHomeView: UIView, CodeView {
     
-    lazy var headerImageView: UIImageView = {
+    private lazy var headerImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
-    lazy var line1Label: UILabel = {
+    private lazy var line1Label: UILabel = {
         let label = UILabel()
         label.font = UIFont.estaparSemiBold(size: .font24)
         label.textColor = .estaparSecondary
@@ -26,7 +27,7 @@ class HelpCenterHomeView: UIView, CodeView {
         return label
     }()
     
-    lazy var line2Label: UILabel = {
+    private lazy var line2Label: UILabel = {
         let label = UILabel()
         label.font = UIFont.estaparSemiBold(size: .font24)
         label.textColor = .estaparWhite
@@ -55,7 +56,9 @@ class HelpCenterHomeView: UIView, CodeView {
     
     private let minimumHeaderHeight: CGFloat = .size100
     private let maximumHeaderHeight: CGFloat = .size200
-    private var currentHeaderHeight: CGFloat = .size200
+    private let animationDuration: Double = .alpha50
+    
+    private var currentHeaderHeight: CGFloat = .size100
     private var previousScrollOffset: CGFloat = .zero
     
     init() {
@@ -107,6 +110,45 @@ class HelpCenterHomeView: UIView, CodeView {
     
     func setupAdditionalConfiguration() {
         backgroundColor = .estaparPrimary
+    }
+    
+    func setupLine1Label(text: String) {
+        line1Label.text = text
+        
+        UIView.animate(withDuration: animationDuration, delay: .zero, options: .curveEaseOut) {
+            self.layoutIfNeeded()
+        }
+    }
+    
+    func setupLine2Label(text: String) {
+        line2Label.text = text
+        
+        UIView.animate(withDuration: animationDuration, delay: .zero, options: .curveEaseOut) {
+            self.layoutIfNeeded()
+        }
+    }
+    
+    func setupHeaderImage(url: URL) {
+        headerImageView.kf.setImage(with: url) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success:
+                self.currentHeaderHeight = .size200
+                
+                self.headerImageView.snp.updateConstraints { (make) -> Void in
+                    make.height.equalTo(CGFloat.size200)
+                }
+                
+                UIView.animate(
+                    withDuration: self.animationDuration,
+                    delay: .zero,
+                    options: .curveEaseOut
+                ) {
+                    self.layoutIfNeeded()
+                }
+            default: break
+            }
+        }
     }
     
     func updateHeaderScroll(offset: CGFloat) -> CGFloat {

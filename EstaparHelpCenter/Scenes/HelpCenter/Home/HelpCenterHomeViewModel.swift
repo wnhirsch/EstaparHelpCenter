@@ -36,15 +36,27 @@ class HelpCenterHomeViewModel {
         
         worker.getCategories(success: { [weak self] model in
             guard let self = self else { return }
+            // Setup values
             self.setImageURL(newValue: model.header.image)
             self.line1 = model.header.line1.replacingOccurrences(of: "%firstName%", with: firstName)
             self.line2 = model.header.line2
             self.categories = model.items
-            self.isLoading.toggle()
+            // Finish loading
+            self.isLoading = false
         }, failure: { [weak self] in
             guard let self = self else { return }
-            self.isLoading.toggle()
-            // TODO: Implement error handling
+            // Finish loading
+            self.isLoading = false
+            // Show error
+            self.coordinator?.showError() { [weak self] _ in
+                guard let self = self else { return }
+                // If user press try again, rerun the request
+                self.fetchCategories()
+            } cancel: { [weak self] _ in
+                guard let self = self else { return }
+                // If user press cancel, close the modal
+                self.coordinator?.dismiss()
+            }
         })
     }
     

@@ -6,7 +6,6 @@
 //
 
 import Combine
-import Kingfisher
 import UIKit
 
 class HelpCenterHomeViewController: UIViewController, Loadable {
@@ -41,10 +40,11 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
     }
     
     private func setupNavigationBar() {
-        title = "Central de Ajuda"
+        title = "helpcenter.home.title".localized
         if let navigationBar = navigationController?.navigationBar {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.backgroundColor = .estaparPrimary
+            navigationBarAppearance.shadowColor = .none
             navigationBarAppearance.titleTextAttributes = [
                 .foregroundColor: UIColor.estaparWhite,
                 .font: UIFont.estaparBold(size: .font16)
@@ -72,7 +72,7 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self = self, let imageURL = self.viewModel.imageURL else { return }
-                self.contentView.headerImageView.kf.setImage(with: imageURL)
+                self.contentView.setupHeaderImage(url: imageURL)
         }.store(in: &cancellables)
         
         // Update Line 1 event
@@ -80,7 +80,7 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                self.contentView.line1Label.text = viewModel.line1
+                self.contentView.setupLine1Label(text: viewModel.line1)
         }.store(in: &cancellables)
         
         // Update Line 2 event
@@ -88,7 +88,7 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                self.contentView.line2Label.text = viewModel.line2
+                self.contentView.setupLine2Label(text: viewModel.line2)
         }.store(in: &cancellables)
         
         // Load Categories event
