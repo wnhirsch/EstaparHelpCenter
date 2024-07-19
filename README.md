@@ -35,3 +35,11 @@ Ao visualizar o Figma da aplicação, percebemos que todo o fluxo da Central de 
 
 Essa tela possui um fundo branco e um botão para abrir a modal da Central de Ajuda, porém, por padrão, essa abertura acontece automaticamente na inicialização, fazendo o botão apenas servir como apoio caso a modal seja fechada.
 
+## Home do Centro de Ajuda
+
+A Tela Inicial do Centro de Ajuda foi construida conforme a descrição do Figma, seguindo os mesmos padrões de fonte, cores, espaçamento, tamanhos e lógica de funcionamento. Passei por algumas decisões na hora do desenvolvimento e gostaria de pontuá-las aqui:
+
+- Adicionei um `loading` na tela para, em caso de atrasos no carregamento da API, o usuário tenha um feedback visual sobre isso.
+- Adicionei também um handler de erro para a chamada de API que exibe uma mensagem informando o problema e oferecendo tentar novamente ou cancelar a operação, fechando a modal.
+- Optei por apenas substituir o valor `%firstname%` contido na string enviada pela API por um valor hardcoded.
+- Optei por usar matemática e alguns truques de linguagem para fazer o efeito da imagem do Header encolher com a `UICollectionView`. Se eu fizesse definindo o header dentro da `UICollectionView`, a organização dos elementos não ficaria tão do meu aguardo, já com essa solução consigo deixar ambos separadas, porém alcançando o efeito almejado. Minha estratégia foi capturar o `contentOffset.y` da `UIScrollView` contida dentro da `UICollectionView`, imaginar todos os estados possíveis da do Scroll e para onde eu devo chegar dada cada diferente alteração. Após isso atualizo o tamanho do header, o alpha da imagem e o próprio `contentOffset.y`. Deixei comentários descritívos no código.

@@ -10,20 +10,20 @@ import SnapKit
 
 class LoadingView: UIView, CodeView {
     
-    private let activityIndicator: UIActivityIndicatorView = {
+    private lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.color = .label
+        activityIndicator.color = .estaparPrimary
         activityIndicator.hidesWhenStopped = false
         return activityIndicator
     }()
     
-    private let messageLabel: UILabel = {
+    private lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.text = nil
-        label.textColor = .label
+        label.textColor = .estaparBlack
         label.numberOfLines = .zero
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: .font16)
+        label.font = UIFont.estaparMedium(size: .font14)
         return label
     }()
 
@@ -47,9 +47,8 @@ class LoadingView: UIView, CodeView {
         }
         
         messageLabel.snp.makeConstraints{ (make) -> Void in
-            make.trailing.equalToSuperview().offset(16)
-            make.leading.equalToSuperview().offset(16)
-            make.top.equalTo(activityIndicator.snp.bottom).offset(16)
+            make.top.equalTo(activityIndicator.snp.bottom).inset(CGFloat.size16)
+            make.horizontalEdges.equalToSuperview().inset(CGFloat.size16)
         }
     }
     

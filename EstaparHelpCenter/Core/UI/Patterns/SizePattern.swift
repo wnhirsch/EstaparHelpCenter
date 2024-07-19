@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SnapKit
 
 extension Double {
     
@@ -35,9 +36,10 @@ extension Double {
 
 extension CGFloat {
     
-    /// just the number one (1)
-    static var one: CGFloat = 1
-    
+    /// size = 2
+    static var size2: CGFloat = 2
+    /// size = 5
+    static var size5: CGFloat = 5
     /// size = 10
     static var size10: CGFloat = 10
     /// size = 15

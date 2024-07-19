@@ -31,7 +31,9 @@ extension APIProvider {
 
     private func plugins() -> [PluginType] {
         return [
-            NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose))
+            NetworkLoggerPlugin(
+                configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose)
+            )
         ]
     }
 }

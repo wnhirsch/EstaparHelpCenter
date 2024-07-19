@@ -19,15 +19,21 @@ extension CGFloat {
 
 extension UIFont {
     
+    /// font = Inter-Medium
     static func estaparMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: "Inter-Medium", size: size) ?? .systemFont(ofSize: size, weight: .medium)
+        return UIFont(name: "Inter-Medium", size: size) ?? 
+            .systemFont(ofSize: size, weight: .medium)
     }
     
+    /// font = Inter-SemiBold
     static func estaparSemiBold(size: CGFloat) -> UIFont {
-        return UIFont(name: "SemiBold", size: size) ?? .systemFont(ofSize: size, weight: .semibold)
+        return UIFont(name: "Inter-SemiBold", size: size) ??
+            .systemFont(ofSize: size, weight: .semibold)
     }
     
+    /// font = Inter-Bold
     static func estaparBold(size: CGFloat) -> UIFont {
-        return UIFont(name: "Bold", size: size) ?? .systemFont(ofSize: size, weight: .bold)
+        return UIFont(name: "Inter-Bold", size: size) ??
+            .systemFont(ofSize: size, weight: .bold)
     }
 }

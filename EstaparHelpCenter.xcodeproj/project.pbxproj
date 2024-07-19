@@ -24,6 +24,16 @@
 		223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D30602C499B6D00071817 /* Inter-SemiBold.ttf */; };
 		223D306E2C499D8000071817 /* FontPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D306D2C499D8000071817 /* FontPattern.swift */; };
 		223D30702C49A67200071817 /* HelpCenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */; };
+		223D30732C49C96900071817 /* HelpCenterHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30722C49C96900071817 /* HelpCenterHomeView.swift */; };
+		223D30752C49C97000071817 /* HelpCenterHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30742C49C97000071817 /* HelpCenterHomeViewController.swift */; };
+		223D30772C49C97600071817 /* HelpCenterHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30762C49C97600071817 /* HelpCenterHomeViewModel.swift */; };
+		223D307A2C49CC3500071817 /* HelpCenterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30792C49CC3500071817 /* HelpCenterWorker.swift */; };
+		223D307C2C49CCA300071817 /* HelpCenterHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D307B2C49CCA300071817 /* HelpCenterHomeModel.swift */; };
+		223D307F2C49D8F100071817 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D307E2C49D8F100071817 /* UICollectionView+Reusable.swift */; };
+		223D30832C49D97400071817 /* HelpCenterHomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */; };
+		223D30852C49DB5100071817 /* MoyaResponse+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30842C49DB5100071817 /* MoyaResponse+Map.swift */; };
+		223D308A2C4ADC8600071817 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30872C4ADC8600071817 /* String+Localizable.swift */; };
+		223D30932C4AE50300071817 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223D30922C4AE50300071817 /* Localizable.strings */; };
 		223E61162C4971FF00465130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61152C4971FF00465130 /* AppDelegate.swift */; };
 		223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61172C4971FF00465130 /* SceneDelegate.swift */; };
 		223E611F2C49720100465130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223E611E2C49720100465130 /* Assets.xcassets */; };
@@ -74,6 +84,16 @@
 		223D30602C499B6D00071817 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		223D306D2C499D8000071817 /* FontPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPattern.swift; sourceTree = "<group>"; };
 		223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCoordinator.swift; sourceTree = "<group>"; };
+		223D30722C49C96900071817 /* HelpCenterHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeView.swift; sourceTree = "<group>"; };
+		223D30742C49C97000071817 /* HelpCenterHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeViewController.swift; sourceTree = "<group>"; };
+		223D30762C49C97600071817 /* HelpCenterHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeViewModel.swift; sourceTree = "<group>"; };
+		223D30792C49CC3500071817 /* HelpCenterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterWorker.swift; sourceTree = "<group>"; };
+		223D307B2C49CCA300071817 /* HelpCenterHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeModel.swift; sourceTree = "<group>"; };
+		223D307E2C49D8F100071817 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeCategoryCell.swift; sourceTree = "<group>"; };
+		223D30842C49DB5100071817 /* MoyaResponse+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+Map.swift"; sourceTree = "<group>"; };
+		223D30872C4ADC8600071817 /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		223D30912C4AE50300071817 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,8 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				223D30562C4993EC00071817 /* ColorPattern.swift */,
-				223D30542C498E7600071817 /* SizePattern.swift */,
 				223D306D2C499D8000071817 /* FontPattern.swift */,
+				223D30542C498E7600071817 /* SizePattern.swift */,
 			);
 			path = Patterns;
 			sourceTree = "<group>";
@@ -187,6 +207,51 @@
 				223D305D2C499B6D00071817 /* Inter-Bold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		223D30712C49C95900071817 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				223D30812C49D93800071817 /* Components */,
+				223D30722C49C96900071817 /* HelpCenterHomeView.swift */,
+				223D30742C49C97000071817 /* HelpCenterHomeViewController.swift */,
+				223D30762C49C97600071817 /* HelpCenterHomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		223D30782C49CC1900071817 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				223D307B2C49CCA300071817 /* HelpCenterHomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		223D307D2C49D8DE00071817 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				223D30842C49DB5100071817 /* MoyaResponse+Map.swift */,
+				223D307E2C49D8F100071817 /* UICollectionView+Reusable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		223D30812C49D93800071817 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		223D30882C4ADC8600071817 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				223D30922C4AE50300071817 /* Localizable.strings */,
+				223D30872C4ADC8600071817 /* String+Localizable.swift */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		223E61092C4971FF00465130 = {
@@ -255,6 +320,8 @@
 			children = (
 				223D30362C49818D00071817 /* API */,
 				223E61472C49778A00465130 /* Coordinator */,
+				223D307D2C49D8DE00071817 /* Extensions */,
+				223D30882C4ADC8600071817 /* Strings */,
 				223D304E2C498DD300071817 /* UI */,
 			);
 			path = Core;
@@ -291,7 +358,10 @@
 		223E614E2C49785F00465130 /* HelpCenter */ = {
 			isa = PBXGroup;
 			children = (
+				223D30782C49CC1900071817 /* Models */,
+				223D30712C49C95900071817 /* Home */,
 				223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */,
+				223D30792C49CC3500071817 /* HelpCenterWorker.swift */,
 			);
 			path = HelpCenter;
 			sourceTree = "<group>";
@@ -404,11 +474,11 @@
 			};
 			buildConfigurationList = 223E610D2C4971FF00465130 /* Build configuration list for PBXProject "EstaparHelpCenter" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 223E61092C4971FF00465130;
 			productRefGroup = 223E61132C4971FF00465130 /* Products */;
@@ -427,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223D30932C4AE50300071817 /* Localizable.strings in Resources */,
 				223D30662C499B6D00071817 /* Inter-Bold.ttf in Resources */,
 				223D30672C499B6D00071817 /* Inter-Medium.ttf in Resources */,
 				223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */,
@@ -543,20 +614,29 @@
 			files = (
 				223D30702C49A67200071817 /* HelpCenterCoordinator.swift in Sources */,
 				223D30462C498CCD00071817 /* HomeView.swift in Sources */,
+				223D30832C49D97400071817 /* HelpCenterHomeCategoryCell.swift in Sources */,
 				223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */,
 				223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */,
 				223E61162C4971FF00465130 /* AppDelegate.swift in Sources */,
 				223D30552C498E7600071817 /* SizePattern.swift in Sources */,
 				223D303C2C49847C00071817 /* APIProvider.swift in Sources */,
 				223D30522C498DD300071817 /* ReusableView.swift in Sources */,
+				223D30852C49DB5100071817 /* MoyaResponse+Map.swift in Sources */,
 				223D30502C498DD300071817 /* LoadingView.swift in Sources */,
 				223D30512C498DD300071817 /* CodeView.swift in Sources */,
 				223D30482C498CD900071817 /* HomeViewController.swift in Sources */,
 				223D30572C4993EC00071817 /* ColorPattern.swift in Sources */,
 				223D306E2C499D8000071817 /* FontPattern.swift in Sources */,
+				223D307C2C49CCA300071817 /* HelpCenterHomeModel.swift in Sources */,
+				223D307A2C49CC3500071817 /* HelpCenterWorker.swift in Sources */,
 				223E61492C4977A400465130 /* Coordinator.swift in Sources */,
 				223D30442C498CC500071817 /* HomeCoordinator.swift in Sources */,
+				223D30752C49C97000071817 /* HelpCenterHomeViewController.swift in Sources */,
+				223D30772C49C97600071817 /* HelpCenterHomeViewModel.swift in Sources */,
+				223D30732C49C96900071817 /* HelpCenterHomeView.swift in Sources */,
 				223D304F2C498DD300071817 /* Loadable.swift in Sources */,
+				223D308A2C4ADC8600071817 /* String+Localizable.swift in Sources */,
+				223D307F2C49D8F100071817 /* UICollectionView+Reusable.swift in Sources */,
 				223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */,
 				223D303E2C49849000071817 /* APITarget.swift in Sources */,
 			);
@@ -594,12 +674,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		223D30922C4AE50300071817 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				223D30912C4AE50300071817 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		223E613A2C49720100465130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -663,6 +755,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -726,7 +819,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EstaparHelpCenter/Support Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Estapar;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zul+";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -761,7 +854,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EstaparHelpCenter/Support Files/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Estapar;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zul+";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
