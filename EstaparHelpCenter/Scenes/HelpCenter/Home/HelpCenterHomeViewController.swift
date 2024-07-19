@@ -13,6 +13,7 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
     private let contentView: HelpCenterHomeView
     private let viewModel: HelpCenterHomeViewModel
     
+    private var isOnBackground = false
     private var cancellables = Set<AnyCancellable>()
 
     init(viewModel: HelpCenterHomeViewModel) {
@@ -39,8 +40,21 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isOnBackground {
+            contentView.animateTransition(isAppearing: true) { [weak self] in
+                guard let self = self else { return }
+                self.isOnBackground = false
+            }
+        }
+    }
+    
     private func setupNavigationBar() {
-        title = "helpcenter.home.title".localized
+        UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+            self.title = "helpcenter.home.title".localized
+        }
+        
         if let navigationBar = navigationController?.navigationBar {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.backgroundColor = .estaparPrimary
@@ -133,7 +147,11 @@ extension HelpCenterHomeViewController: UICollectionViewDataSource {
 extension HelpCenterHomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.goToCategory(index: indexPath.row)
+        contentView.animateTransition(isAppearing: isOnBackground) { [weak self] in
+            guard let self = self else { return }
+            self.isOnBackground = true
+            self.viewModel.goToCategory(index: indexPath.row)
+        }
     }
 }
 

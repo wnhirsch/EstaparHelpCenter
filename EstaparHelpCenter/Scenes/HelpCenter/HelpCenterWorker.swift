@@ -35,4 +35,26 @@ class HelpCenterWorker {
             }
         }
     }
+    
+    func getCategory(
+        id: String,
+        success: ((HelpCenterCategoryModel) -> Void)? = nil,
+        failure: (() -> Void)? = nil
+    ) {
+        service.getCategory(id: id) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let model = try response.mapObject(HelpCenterCategoryModel.self)
+                    success?(model)
+                } catch let error {
+                    print(error)
+                    failure?()
+                }
+            case let .failure(error):
+                print(error)
+                failure?()
+            }
+        }
+    }
 }

@@ -25,8 +25,10 @@ class HelpCenterCoordinator: Coordinator {
     }
     
     func startCategory(categoryId: String) {
-        let vc = UIViewController()
-        modalNavigationController.pushViewController(vc, animated: true)
+        let vc = HelpCenterCategoryViewController(
+            viewModel: .init(categoryId: categoryId, coordinator: self)
+        )
+        modalNavigationController.pushViewController(vc, animated: false)
     }
     
     func showError(
@@ -58,5 +60,9 @@ class HelpCenterCoordinator: Coordinator {
     
     func dismiss() {
         navigationController.dismiss(animated: true)
+    }
+    
+    func pop() {
+        modalNavigationController.popViewController(animated: false)
     }
 }

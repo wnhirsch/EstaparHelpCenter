@@ -34,6 +34,11 @@
 		223D30852C49DB5100071817 /* MoyaResponse+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30842C49DB5100071817 /* MoyaResponse+Map.swift */; };
 		223D308A2C4ADC8600071817 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30872C4ADC8600071817 /* String+Localizable.swift */; };
 		223D30932C4AE50300071817 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223D30922C4AE50300071817 /* Localizable.strings */; };
+		223D30962C4AE99A00071817 /* HelpCenterCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30952C4AE99A00071817 /* HelpCenterCategoryView.swift */; };
+		223D30982C4AE9DB00071817 /* HelpCenterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30972C4AE9DB00071817 /* HelpCenterCategoryViewController.swift */; };
+		223D309A2C4AE9E500071817 /* HelpCenterCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */; };
+		223D309C2C4AEBBC00071817 /* HelpCenterCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */; };
+		223D309E2C4AEC6000071817 /* HelpCenterHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */; };
 		223E61162C4971FF00465130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61152C4971FF00465130 /* AppDelegate.swift */; };
 		223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61172C4971FF00465130 /* SceneDelegate.swift */; };
 		223E611F2C49720100465130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223E611E2C49720100465130 /* Assets.xcassets */; };
@@ -94,6 +99,11 @@
 		223D30842C49DB5100071817 /* MoyaResponse+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+Map.swift"; sourceTree = "<group>"; };
 		223D30872C4ADC8600071817 /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		223D30912C4AE50300071817 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		223D30952C4AE99A00071817 /* HelpCenterCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryView.swift; sourceTree = "<group>"; };
+		223D30972C4AE9DB00071817 /* HelpCenterCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryViewController.swift; sourceTree = "<group>"; };
+		223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryViewModel.swift; sourceTree = "<group>"; };
+		223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryModel.swift; sourceTree = "<group>"; };
+		223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHeaderModel.swift; sourceTree = "<group>"; };
 		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +233,8 @@
 		223D30782C49CC1900071817 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */,
+				223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */,
 				223D307B2C49CCA300071817 /* HelpCenterHomeModel.swift */,
 			);
 			path = Models;
@@ -252,6 +264,16 @@
 				223D30872C4ADC8600071817 /* String+Localizable.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		223D30942C4AE97400071817 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				223D30952C4AE99A00071817 /* HelpCenterCategoryView.swift */,
+				223D30972C4AE9DB00071817 /* HelpCenterCategoryViewController.swift */,
+				223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		223E61092C4971FF00465130 = {
@@ -358,6 +380,7 @@
 		223E614E2C49785F00465130 /* HelpCenter */ = {
 			isa = PBXGroup;
 			children = (
+				223D30942C4AE97400071817 /* Category */,
 				223D30782C49CC1900071817 /* Models */,
 				223D30712C49C95900071817 /* Home */,
 				223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */,
@@ -614,6 +637,7 @@
 			files = (
 				223D30702C49A67200071817 /* HelpCenterCoordinator.swift in Sources */,
 				223D30462C498CCD00071817 /* HomeView.swift in Sources */,
+				223D309A2C4AE9E500071817 /* HelpCenterCategoryViewModel.swift in Sources */,
 				223D30832C49D97400071817 /* HelpCenterHomeCategoryCell.swift in Sources */,
 				223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */,
 				223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */,
@@ -630,15 +654,19 @@
 				223D307C2C49CCA300071817 /* HelpCenterHomeModel.swift in Sources */,
 				223D307A2C49CC3500071817 /* HelpCenterWorker.swift in Sources */,
 				223E61492C4977A400465130 /* Coordinator.swift in Sources */,
+				223D30962C4AE99A00071817 /* HelpCenterCategoryView.swift in Sources */,
 				223D30442C498CC500071817 /* HomeCoordinator.swift in Sources */,
+				223D30982C4AE9DB00071817 /* HelpCenterCategoryViewController.swift in Sources */,
 				223D30752C49C97000071817 /* HelpCenterHomeViewController.swift in Sources */,
 				223D30772C49C97600071817 /* HelpCenterHomeViewModel.swift in Sources */,
 				223D30732C49C96900071817 /* HelpCenterHomeView.swift in Sources */,
 				223D304F2C498DD300071817 /* Loadable.swift in Sources */,
+				223D309E2C4AEC6000071817 /* HelpCenterHeaderModel.swift in Sources */,
 				223D308A2C4ADC8600071817 /* String+Localizable.swift in Sources */,
 				223D307F2C49D8F100071817 /* UICollectionView+Reusable.swift in Sources */,
 				223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */,
 				223D303E2C49849000071817 /* APITarget.swift in Sources */,
+				223D309C2C4AEBBC00071817 /* HelpCenterCategoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

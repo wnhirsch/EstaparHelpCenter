@@ -10,3 +10,9 @@
 // MARK: - HelpCenterHome
 "helpcenter.home.title" = "Central de Ajuda";
 "helpcenter.home.articles" = "%d artigos";
+
+// MARK: - HelpCenterCategory
+"helpcenter.category.title" = "Perguntas frequentes";
+"helpcenter.category.search" = "Pesquisar";
+
+

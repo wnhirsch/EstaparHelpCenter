@@ -36,7 +36,7 @@ class HelpCenterHomeView: UIView, CodeView {
         return label
     }()
     
-    private lazy var centerView: UIView = {
+    private lazy var roundedView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = .size20
         view.backgroundColor = .estaparWhite
@@ -51,14 +51,14 @@ class HelpCenterHomeView: UIView, CodeView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.register(HelpCenterHomeCategoryCell.self)
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
     
     private let minimumHeaderHeight: CGFloat = .size100
     private let maximumHeaderHeight: CGFloat = .size200
-    private let animationDuration: Double = .alpha50
     
-    private var currentHeaderHeight: CGFloat = .size100
+    private var currentHeaderHeight: CGFloat = .zero
     private var previousScrollOffset: CGFloat = .zero
     
     init() {
@@ -74,9 +74,9 @@ class HelpCenterHomeView: UIView, CodeView {
         addSubview(headerImageView)
         addSubview(line1Label)
         addSubview(line2Label)
-        addSubview(centerView)
+        addSubview(roundedView)
         
-        centerView.addSubview(collectionView)
+        roundedView.addSubview(collectionView)
     }
     
     func setupConstraints() {
@@ -96,15 +96,16 @@ class HelpCenterHomeView: UIView, CodeView {
             make.bottom.equalTo(headerImageView.snp.bottom).inset(CGFloat.size20)
         }
         
-        centerView.snp.makeConstraints { (make) -> Void in
+        roundedView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(headerImageView.snp.bottom)
             make.horizontalEdges.equalToSuperview()
             make.bottom.equalToSuperview().offset(CGFloat.size20)
         }
         
         collectionView.snp.makeConstraints { (make) -> Void in
-            make.verticalEdges.equalToSuperview()
+            make.top.equalToSuperview()
             make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
+            make.bottom.equalToSuperview().inset(CGFloat.size20)
         }
     }
     
@@ -115,7 +116,7 @@ class HelpCenterHomeView: UIView, CodeView {
     func setupLine1Label(text: String) {
         line1Label.text = text
         
-        UIView.animate(withDuration: animationDuration, delay: .zero, options: .curveEaseOut) {
+        UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
             self.layoutIfNeeded()
         }
     }
@@ -123,7 +124,7 @@ class HelpCenterHomeView: UIView, CodeView {
     func setupLine2Label(text: String) {
         line2Label.text = text
         
-        UIView.animate(withDuration: animationDuration, delay: .zero, options: .curveEaseOut) {
+        UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
             self.layoutIfNeeded()
         }
     }
@@ -139,11 +140,7 @@ class HelpCenterHomeView: UIView, CodeView {
                     make.height.equalTo(CGFloat.size200)
                 }
                 
-                UIView.animate(
-                    withDuration: self.animationDuration,
-                    delay: .zero,
-                    options: .curveEaseOut
-                ) {
+                UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
                     self.layoutIfNeeded()
                 }
             default: break
@@ -198,5 +195,36 @@ class HelpCenterHomeView: UIView, CodeView {
         
         previousScrollOffset = newOffset
         return newOffset
+    }
+    
+    func animateTransition(isAppearing: Bool, completion: (() -> Void)? = nil) {
+        if isAppearing {
+            headerImageView.snp.updateConstraints { (make) -> Void in
+                make.height.equalTo(currentHeaderHeight)
+            }
+            
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.line1Label.alpha = 1
+                self.line2Label.alpha = 1
+                self.collectionView.alpha = 1
+                self.headerImageView.alpha = (self.currentHeaderHeight - self.minimumHeaderHeight) /
+                                             (self.maximumHeaderHeight - self.minimumHeaderHeight)
+                
+                self.layoutIfNeeded()
+            } completion: { _ in completion?() }
+        } else {
+            headerImageView.snp.updateConstraints { (make) -> Void in
+                make.height.equalTo(0)
+            }
+            
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.headerImageView.alpha = 0
+                self.line1Label.alpha = 0
+                self.line2Label.alpha = 0
+                self.collectionView.alpha = 0
+                
+                self.layoutIfNeeded()
+            } completion: { _ in completion?() }
+        }
     }
 }
