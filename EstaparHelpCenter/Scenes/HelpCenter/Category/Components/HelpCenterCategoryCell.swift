@@ -65,6 +65,7 @@ class HelpCenterCategoryCell: UITableViewCell, CodeView {
     }
     
     func setupAdditionalConfiguration() {
+        backgroundColor = .estaparWhite
         selectionStyle = .none
     }
     

@@ -54,6 +54,7 @@ class HelpCenterCategorySection: UITableViewCell, CodeView {
     lazy var tableView: DynamicTableView = {
         let tableView = DynamicTableView()
         tableView.register(HelpCenterCategoryCell.self)
+        tableView.backgroundColor = .estaparWhite
         tableView.isScrollEnabled = false
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
@@ -117,6 +118,7 @@ class HelpCenterCategorySection: UITableViewCell, CodeView {
     }
     
     func setupAdditionalConfiguration() {
+        backgroundColor = .estaparWhite
         selectionStyle = .none
         tableView.dataSource = self
         

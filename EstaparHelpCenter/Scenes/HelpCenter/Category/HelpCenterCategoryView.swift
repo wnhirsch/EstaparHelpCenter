@@ -67,6 +67,7 @@ class HelpCenterCategoryView: UIView, CodeView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(HelpCenterCategorySection.self)
+        tableView.backgroundColor = .estaparWhite
         tableView.isScrollEnabled = true
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false

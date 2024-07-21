@@ -47,10 +47,12 @@ class HelpCenterHomeView: UIView, CodeView {
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = .size15
         flowLayout.minimumInteritemSpacing = .size15
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.register(HelpCenterHomeCategoryCell.self)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .estaparWhite
         return collectionView
     }()
     
