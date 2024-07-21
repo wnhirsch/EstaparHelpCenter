@@ -54,7 +54,7 @@ class HelpCenterCategoryView: UIView, CodeView {
         searchImage.image = .search
         searchImage.contentMode = .scaleAspectFit
         
-        let leftView = UIView(
+        let leftView = UIView( // Trick to better positionate the search icon
             frame: CGRect(x: .zero, y: .zero, width: .size15 + .size20 + .size10, height: .size50)
         )
         leftView.addSubview(searchImage)
@@ -62,6 +62,22 @@ class HelpCenterCategoryView: UIView, CodeView {
         textField.leftView = leftView
         textField.leftViewMode = .always
         return textField
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(HelpCenterCategorySection.self)
+        tableView.isScrollEnabled = true
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.separatorStyle = .none
+        tableView.contentInset = .init(
+            top: .size15 + .size10, // Trick to see the cards passing behind the search field
+            left: .zero,
+            bottom: .size15,
+            right: .zero
+        )
+        return tableView
     }()
     
     init() {
@@ -77,6 +93,7 @@ class HelpCenterCategoryView: UIView, CodeView {
         addSubview(roundedView)
         
         roundedView.addSubview(titleLabel)
+        roundedView.addSubview(tableView)
         roundedView.addSubview(searchField)
     }
     
@@ -97,6 +114,12 @@ class HelpCenterCategoryView: UIView, CodeView {
             make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
             make.height.equalTo(CGFloat.size50)
         }
+        
+        tableView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(searchField.snp.bottom).inset(CGFloat.size10)
+            make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
+            make.bottom.equalToSuperview()
+        }
     }
     
     func setupAdditionalConfiguration() {
@@ -107,15 +130,18 @@ class HelpCenterCategoryView: UIView, CodeView {
         if isAppearing {
             titleLabel.alpha = 0
             searchField.alpha = 0
+            tableView.alpha = 0
             
             UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
                 self.titleLabel.alpha = 1
                 self.searchField.alpha = 1
+                self.tableView.alpha = 1
             } completion: { _ in completion?() }
         } else {
             UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
                 self.titleLabel.alpha = 0
                 self.searchField.alpha = 0
+                self.tableView.alpha = 0
             } completion: { _ in completion?() }
         }
     }

@@ -120,10 +120,6 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
 
 extension HelpCenterHomeViewController: UICollectionViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int

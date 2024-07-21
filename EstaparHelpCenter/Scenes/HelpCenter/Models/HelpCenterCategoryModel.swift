@@ -19,7 +19,7 @@ struct HelpCenterCategoryModel: Decodable {
         let id: String
         let title: String
         let type: ItemType
-        let items: [Article]
+        var items: [Article]
         
         struct Article: Decodable {
             let id: String

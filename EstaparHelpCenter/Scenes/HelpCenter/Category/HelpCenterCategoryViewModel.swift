@@ -14,7 +14,8 @@ class HelpCenterCategoryViewModel {
     private let categoryId: String
     
     @Published var title: String = ""
-    @Published var sections = [HelpCenterCategoryModel.Section]()
+    @Published var filteredSections = [HelpCenterCategoryModel.Section]()
+    private var sections = [HelpCenterCategoryModel.Section]()
     
     @Published var isLoading: Bool = false
 
@@ -37,6 +38,7 @@ class HelpCenterCategoryViewModel {
             // Setup values
             self.title = model.title
             self.sections = model.items
+            self.filteredSections = model.items
             // Finish loading
             self.isLoading = false
         } failure: { [weak self] in
@@ -54,6 +56,53 @@ class HelpCenterCategoryViewModel {
                 self.goBackToHome()
             }
         }
+    }
+    
+    func filterSections(by text: String) {
+        // Get the original value from the API
+        var filteredSections = self.sections
+        // Clean the typed text and transform it in an array of words
+        let filterWords = text.lowercased()
+                              .trimmingCharacters(in: .whitespacesAndNewlines)
+                              .components(separatedBy: .whitespacesAndNewlines)
+        
+        // For each section...
+        for sectionIndex in filteredSections.indices.reversed() {
+            let articles = filteredSections[sectionIndex].items
+            
+            // and for each article in a section...
+            for articleIndex in articles.indices.reversed() {
+                // Get all the words of its title
+                let articleWords = articles[articleIndex].title.components(separatedBy: .whitespacesAndNewlines)
+                // We assume that has a match
+                var hasMatch = true
+                
+                // So, for each word...
+                for word in filterWords {
+                    // We search for one word in the article that has it as a prefix
+                    // If not, we stop the search and decide that it is not a match
+                    // This because we need that all the words typed by the user exists as a prefix
+                    // in the article, all of them
+                    if !articleWords.contains(where: { $0.lowercased().hasPrefix(word) }) {
+                        hasMatch = false
+                        break
+                    }
+                }
+                
+                // If it is not a match, we remove the article
+                if !hasMatch {
+                    filteredSections[sectionIndex].items.remove(at: articleIndex)
+                }
+            }
+            
+            // If all the articles were removed, we remove the entire section
+            if filteredSections[sectionIndex].items.isEmpty {
+                filteredSections.remove(at: sectionIndex)
+            }
+        }
+        
+        // At the end, send the result to te table view
+        self.filteredSections = filteredSections
     }
     
     func goBackToHome() {

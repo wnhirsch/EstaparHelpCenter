@@ -87,6 +87,7 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     
     private func bind() {
         contentView.searchField.delegate = self
+        contentView.tableView.dataSource = self
         
         // Loading event
         viewModel.$isLoading.sink { [weak self] isLoading in
@@ -100,6 +101,14 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 self.setTitleWithFade(self.viewModel.title)
+        }.store(in: &cancellables)
+        
+        // Update sections event
+        viewModel.$filteredSections
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                self.contentView.tableView.reloadData()
         }.store(in: &cancellables)
         
         // First API call
@@ -121,7 +130,7 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     }
     
     @objc func dismissKeyboard() {
-        contentView.searchField.resignFirstResponder()
+        view.endEditing(true)
     }
 }
 
@@ -141,13 +150,25 @@ extension HelpCenterCategoryViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        var newText = textField.text ?? ""
-        let firstIndex = newText.index(newText.startIndex, offsetBy: range.lowerBound)
-        let lastIndex = newText.index(newText.startIndex, offsetBy: range.upperBound)
-        newText.replaceSubrange(firstIndex..<lastIndex, with: string)
+        var newFilter = textField.text ?? ""
+        let firstIndex = newFilter.index(newFilter.startIndex, offsetBy: range.lowerBound)
+        let lastIndex = newFilter.index(newFilter.startIndex, offsetBy: range.upperBound)
+        newFilter.replaceSubrange(firstIndex..<lastIndex, with: string)
         
-        // TODO: Search Algorithm
-        
+        viewModel.filterSections(by: newFilter)
         return true
+    }
+}
+
+extension HelpCenterCategoryViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.filteredSections.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(HelpCenterCategorySection.self, for: indexPath)
+        cell.setup(model: viewModel.filteredSections[indexPath.row])
+        return cell
     }
 }
