@@ -18,7 +18,6 @@
 		223D30512C498DD300071817 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304C2C498DD300071817 /* CodeView.swift */; };
 		223D30522C498DD300071817 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304D2C498DD300071817 /* ReusableView.swift */; };
 		223D30552C498E7600071817 /* SizePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30542C498E7600071817 /* SizePattern.swift */; };
-		223D30572C4993EC00071817 /* ColorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30562C4993EC00071817 /* ColorPattern.swift */; };
 		223D30662C499B6D00071817 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D305D2C499B6D00071817 /* Inter-Bold.ttf */; };
 		223D30672C499B6D00071817 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D305E2C499B6D00071817 /* Inter-Medium.ttf */; };
 		223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D30602C499B6D00071817 /* Inter-SemiBold.ttf */; };
@@ -39,6 +38,7 @@
 		223D309A2C4AE9E500071817 /* HelpCenterCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */; };
 		223D309C2C4AEBBC00071817 /* HelpCenterCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */; };
 		223D309E2C4AEC6000071817 /* HelpCenterHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */; };
+		223D30A02C4CD17200071817 /* UIViewController+TitleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309F2C4CD17200071817 /* UIViewController+TitleAnimation.swift */; };
 		223E61162C4971FF00465130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61152C4971FF00465130 /* AppDelegate.swift */; };
 		223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61172C4971FF00465130 /* SceneDelegate.swift */; };
 		223E611F2C49720100465130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223E611E2C49720100465130 /* Assets.xcassets */; };
@@ -83,7 +83,6 @@
 		223D304C2C498DD300071817 /* CodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		223D304D2C498DD300071817 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		223D30542C498E7600071817 /* SizePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePattern.swift; sourceTree = "<group>"; };
-		223D30562C4993EC00071817 /* ColorPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPattern.swift; sourceTree = "<group>"; };
 		223D305D2C499B6D00071817 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		223D305E2C499B6D00071817 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		223D30602C499B6D00071817 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryViewModel.swift; sourceTree = "<group>"; };
 		223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryModel.swift; sourceTree = "<group>"; };
 		223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHeaderModel.swift; sourceTree = "<group>"; };
+		223D309F2C4CD17200071817 /* UIViewController+TitleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TitleAnimation.swift"; sourceTree = "<group>"; };
 		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,7 +202,6 @@
 		223D30582C4997A300071817 /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
-				223D30562C4993EC00071817 /* ColorPattern.swift */,
 				223D306D2C499D8000071817 /* FontPattern.swift */,
 				223D30542C498E7600071817 /* SizePattern.swift */,
 			);
@@ -245,6 +244,7 @@
 			children = (
 				223D30842C49DB5100071817 /* MoyaResponse+Map.swift */,
 				223D307E2C49D8F100071817 /* UICollectionView+Reusable.swift */,
+				223D309F2C4CD17200071817 /* UIViewController+TitleAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -648,8 +648,8 @@
 				223D30852C49DB5100071817 /* MoyaResponse+Map.swift in Sources */,
 				223D30502C498DD300071817 /* LoadingView.swift in Sources */,
 				223D30512C498DD300071817 /* CodeView.swift in Sources */,
+				223D30A02C4CD17200071817 /* UIViewController+TitleAnimation.swift in Sources */,
 				223D30482C498CD900071817 /* HomeViewController.swift in Sources */,
-				223D30572C4993EC00071817 /* ColorPattern.swift in Sources */,
 				223D306E2C499D8000071817 /* FontPattern.swift in Sources */,
 				223D307C2C49CCA300071817 /* HelpCenterHomeModel.swift in Sources */,
 				223D307A2C49CC3500071817 /* HelpCenterWorker.swift in Sources */,

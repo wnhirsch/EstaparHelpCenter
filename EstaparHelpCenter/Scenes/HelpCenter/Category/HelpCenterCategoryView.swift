@@ -27,6 +27,43 @@ class HelpCenterCategoryView: UIView, CodeView {
         return label
     }()
     
+    lazy var searchField: UITextField = {
+        let textField = UITextField()
+        textField.keyboardType = .asciiCapable
+        textField.returnKeyType = .search
+        textField.font = .estaparSemiBold(size: .font14)
+        textField.attributedPlaceholder = .init(
+            string: "helpcenter.category.search".localized,
+            attributes: [
+                .foregroundColor: UIColor.estaparPrimaryGray,
+                .font: UIFont.estaparSemiBold(size: .font14)
+            ]
+        )
+        
+        textField.textColor = .estaparBlack
+        textField.tintColor = .estaparPrimary
+        textField.backgroundColor = .estaparSecondaryGray
+        
+        textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.borderWidth = .size2
+        textField.layer.cornerRadius = .size10
+        
+        let searchImage = UIImageView(
+            frame: CGRect(x: .size15, y: .size15, width: .size20, height: .size20)
+        )
+        searchImage.image = .search
+        searchImage.contentMode = .scaleAspectFit
+        
+        let leftView = UIView(
+            frame: CGRect(x: .zero, y: .zero, width: .size15 + .size20 + .size10, height: .size50)
+        )
+        leftView.addSubview(searchImage)
+        
+        textField.leftView = leftView
+        textField.leftViewMode = .always
+        return textField
+    }()
+    
     init() {
         super.init(frame: .zero)
         setupView()
@@ -40,6 +77,7 @@ class HelpCenterCategoryView: UIView, CodeView {
         addSubview(roundedView)
         
         roundedView.addSubview(titleLabel)
+        roundedView.addSubview(searchField)
     }
     
     func setupConstraints() {
@@ -53,6 +91,12 @@ class HelpCenterCategoryView: UIView, CodeView {
             make.top.equalToSuperview().inset(CGFloat.size20)
             make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
         }
+        
+        searchField.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(titleLabel.snp.bottom).offset(CGFloat.size10)
+            make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
+            make.height.equalTo(CGFloat.size50)
+        }
     }
     
     func setupAdditionalConfiguration() {
@@ -61,15 +105,30 @@ class HelpCenterCategoryView: UIView, CodeView {
     
     func animateTransition(isAppearing: Bool, completion: (() -> Void)? = nil) {
         if isAppearing {
-            self.titleLabel.alpha = 0
+            titleLabel.alpha = 0
+            searchField.alpha = 0
             
             UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
                 self.titleLabel.alpha = 1
+                self.searchField.alpha = 1
             } completion: { _ in completion?() }
         } else {
             UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
                 self.titleLabel.alpha = 0
+                self.searchField.alpha = 0
             } completion: { _ in completion?() }
+        }
+    }
+    
+    func animateSearchFieldBorder(isFocused: Bool) {
+        if isFocused {
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.searchField.layer.borderColor = UIColor.estaparPrimary.cgColor
+            }
+        } else {
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.searchField.layer.borderColor = UIColor.clear.cgColor
+            }
         }
     }
 }

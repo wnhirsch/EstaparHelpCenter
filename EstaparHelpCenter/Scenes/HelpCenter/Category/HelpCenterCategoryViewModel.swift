@@ -13,7 +13,7 @@ class HelpCenterCategoryViewModel {
     private let worker: HelpCenterWorker
     private let categoryId: String
     
-    @Published var title: String = "helpcenter.home.title".localized
+    @Published var title: String = ""
     @Published var sections = [HelpCenterCategoryModel.Section]()
     
     @Published var isLoading: Bool = false

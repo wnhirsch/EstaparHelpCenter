@@ -36,6 +36,7 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupKeyboardDismissEvent()
         setupNavigationBar()
         bind()
     }
@@ -48,6 +49,11 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
                 self.isFirstAppearing = false
             }
         }
+    }
+    
+    func setupKeyboardDismissEvent() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
     private func setupNavigationBar() {
@@ -72,10 +78,16 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
             target: self,
             action: #selector(backButtonTapped)
         )
-        navigationItem.leftBarButtonItem?.tintColor = .estaparWhite
+        navigationItem.leftBarButtonItem?.tintColor = .clear
+        
+        UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+            self.navigationItem.leftBarButtonItem?.tintColor = .estaparWhite
+        }
     }
     
     private func bind() {
+        contentView.searchField.delegate = self
+        
         // Loading event
         viewModel.$isLoading.sink { [weak self] isLoading in
             guard let self = self else { return }
@@ -87,7 +99,7 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                self.title = self.viewModel.title
+                self.setTitleWithFade(self.viewModel.title)
         }.store(in: &cancellables)
         
         // First API call
@@ -95,9 +107,47 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     }
     
     @objc func backButtonTapped() {
+        // Animate Navigation Bar
+        setTitleWithFade(nil) // Hide title
+        UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+            self.navigationItem.leftBarButtonItem?.tintColor = .clear // Hide back button
+        }
+        
+        // Animate View
         contentView.animateTransition(isAppearing: false) { [weak self] in
             guard let self = self else { return }
             self.viewModel.goBackToHome()
         }
+    }
+    
+    @objc func dismissKeyboard() {
+        contentView.searchField.resignFirstResponder()
+    }
+}
+
+extension HelpCenterCategoryViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        contentView.animateSearchFieldBorder(isFocused: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        contentView.animateSearchFieldBorder(isFocused: false)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var newText = textField.text ?? ""
+        let firstIndex = newText.index(newText.startIndex, offsetBy: range.lowerBound)
+        let lastIndex = newText.index(newText.startIndex, offsetBy: range.upperBound)
+        newText.replaceSubrange(firstIndex..<lastIndex, with: string)
+        
+        // TODO: Search Algorithm
+        
+        return true
     }
 }

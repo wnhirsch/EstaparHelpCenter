@@ -43,6 +43,8 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if isOnBackground {
+            setTitleWithFade("helpcenter.home.title".localized)
+            
             contentView.animateTransition(isAppearing: true) { [weak self] in
                 guard let self = self else { return }
                 self.isOnBackground = false
@@ -51,9 +53,7 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
     }
     
     private func setupNavigationBar() {
-        UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
-            self.title = "helpcenter.home.title".localized
-        }
+        setTitleWithFade("helpcenter.home.title".localized)
         
         if let navigationBar = navigationController?.navigationBar {
             let navigationBarAppearance = UINavigationBarAppearance()
@@ -147,6 +147,8 @@ extension HelpCenterHomeViewController: UICollectionViewDataSource {
 extension HelpCenterHomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        setTitleWithFade(nil) // Hide navigation title
+        
         contentView.animateTransition(isAppearing: isOnBackground) { [weak self] in
             guard let self = self else { return }
             self.isOnBackground = true
