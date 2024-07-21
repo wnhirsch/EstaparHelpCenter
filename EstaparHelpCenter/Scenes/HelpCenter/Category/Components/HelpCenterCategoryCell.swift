@@ -45,7 +45,7 @@ class HelpCenterCategoryCell: UITableViewCell, CodeView {
     }
     
     func buildViewHierarchy() {
-        addSubview(stackView)
+        contentView.addSubview(stackView)
         
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(arrowImageView)

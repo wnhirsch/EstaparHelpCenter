@@ -71,6 +71,9 @@ class HelpCenterCategoryView: UIView, CodeView {
         tableView.isScrollEnabled = true
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = .size50
         tableView.separatorStyle = .none
         tableView.contentInset = .init(
             top: .size15 + .size10, // Trick to see the cards passing behind the search field

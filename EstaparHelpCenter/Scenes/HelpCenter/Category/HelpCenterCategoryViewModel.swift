@@ -17,6 +17,7 @@ class HelpCenterCategoryViewModel {
     @Published var filteredSections = [HelpCenterCategoryModel.Section]()
     private var sections = [HelpCenterCategoryModel.Section]()
     
+    @Published var isFiltering: Bool = false
     @Published var isLoading: Bool = false
 
     init(
@@ -59,6 +60,13 @@ class HelpCenterCategoryViewModel {
     }
     
     func filterSections(by text: String) {
+        isFiltering = !text.isEmpty
+        
+        guard !text.isEmpty else { // If there is no filter, reset
+            self.filteredSections = sections
+            return
+        }
+        
         // Get the original value from the API
         var filteredSections = self.sections
         // Clean the typed text and transform it in an array of words

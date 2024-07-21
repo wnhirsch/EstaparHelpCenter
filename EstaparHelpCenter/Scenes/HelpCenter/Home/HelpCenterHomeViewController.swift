@@ -118,6 +118,7 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension HelpCenterHomeViewController: UICollectionViewDataSource {
     
     func collectionView(
@@ -140,6 +141,7 @@ extension HelpCenterHomeViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension HelpCenterHomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -153,6 +155,7 @@ extension HelpCenterHomeViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension HelpCenterHomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(
@@ -173,6 +176,7 @@ extension HelpCenterHomeViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - UIScrollViewDelegate
 extension HelpCenterHomeViewController {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

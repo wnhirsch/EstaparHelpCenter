@@ -59,7 +59,7 @@ class HelpCenterHomeCategoryCell: UICollectionViewCell, CodeView {
     }
     
     func buildViewHierarchy() {
-        addSubview(cardStackView)
+        contentView.addSubview(cardStackView)
         
         cardStackView.addArrangedSubview(titleLabel)
         cardStackView.addArrangedSubview(footerStackView)

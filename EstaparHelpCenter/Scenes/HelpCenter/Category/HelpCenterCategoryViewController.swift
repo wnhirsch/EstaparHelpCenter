@@ -53,6 +53,7 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     
     func setupKeyboardDismissEvent() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
     }
     
@@ -88,6 +89,7 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     private func bind() {
         contentView.searchField.delegate = self
         contentView.tableView.dataSource = self
+        contentView.tableView.delegate = self
         
         // Loading event
         viewModel.$isLoading.sink { [weak self] isLoading in
@@ -134,6 +136,7 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension HelpCenterCategoryViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -160,6 +163,7 @@ extension HelpCenterCategoryViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension HelpCenterCategoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -168,7 +172,22 @@ extension HelpCenterCategoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(HelpCenterCategorySection.self, for: indexPath)
-        cell.setup(model: viewModel.filteredSections[indexPath.row])
+        cell.setup(
+            model: viewModel.filteredSections[indexPath.row],
+            isFiltering: viewModel.isFiltering
+        )
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        <#code#>
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HelpCenterCategoryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
