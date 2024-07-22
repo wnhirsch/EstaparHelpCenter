@@ -1,0 +1,1070 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		223D303C2C49847C00071817 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D303B2C49847C00071817 /* APIProvider.swift */; };
+		223D303E2C49849000071817 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D303D2C49849000071817 /* APITarget.swift */; };
+		223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30412C4984ED00071817 /* HelpCenterService.swift */; };
+		223D30442C498CC500071817 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30432C498CC500071817 /* HomeCoordinator.swift */; };
+		223D30462C498CCD00071817 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30452C498CCD00071817 /* HomeView.swift */; };
+		223D30482C498CD900071817 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30472C498CD900071817 /* HomeViewController.swift */; };
+		223D304F2C498DD300071817 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30492C498DD300071817 /* Loadable.swift */; };
+		223D30502C498DD300071817 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304A2C498DD300071817 /* LoadingView.swift */; };
+		223D30512C498DD300071817 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304C2C498DD300071817 /* CodeView.swift */; };
+		223D30522C498DD300071817 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D304D2C498DD300071817 /* ReusableView.swift */; };
+		223D30552C498E7600071817 /* SizePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30542C498E7600071817 /* SizePattern.swift */; };
+		223D30662C499B6D00071817 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D305D2C499B6D00071817 /* Inter-Bold.ttf */; };
+		223D30672C499B6D00071817 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D305E2C499B6D00071817 /* Inter-Medium.ttf */; };
+		223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 223D30602C499B6D00071817 /* Inter-SemiBold.ttf */; };
+		223D306E2C499D8000071817 /* FontPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D306D2C499D8000071817 /* FontPattern.swift */; };
+		223D30702C49A67200071817 /* HelpCenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */; };
+		223D30732C49C96900071817 /* HelpCenterHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30722C49C96900071817 /* HelpCenterHomeView.swift */; };
+		223D30752C49C97000071817 /* HelpCenterHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30742C49C97000071817 /* HelpCenterHomeViewController.swift */; };
+		223D30772C49C97600071817 /* HelpCenterHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30762C49C97600071817 /* HelpCenterHomeViewModel.swift */; };
+		223D307A2C49CC3500071817 /* HelpCenterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30792C49CC3500071817 /* HelpCenterWorker.swift */; };
+		223D307C2C49CCA300071817 /* HelpCenterHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D307B2C49CCA300071817 /* HelpCenterHomeModel.swift */; };
+		223D307F2C49D8F100071817 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D307E2C49D8F100071817 /* UICollectionView+Reusable.swift */; };
+		223D30832C49D97400071817 /* HelpCenterHomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */; };
+		223D30852C49DB5100071817 /* MoyaResponse+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30842C49DB5100071817 /* MoyaResponse+Map.swift */; };
+		223D308A2C4ADC8600071817 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30872C4ADC8600071817 /* String+Localizable.swift */; };
+		223D30932C4AE50300071817 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223D30922C4AE50300071817 /* Localizable.strings */; };
+		223D30962C4AE99A00071817 /* HelpCenterCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30952C4AE99A00071817 /* HelpCenterCategoryView.swift */; };
+		223D30982C4AE9DB00071817 /* HelpCenterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30972C4AE9DB00071817 /* HelpCenterCategoryViewController.swift */; };
+		223D309A2C4AE9E500071817 /* HelpCenterCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */; };
+		223D309C2C4AEBBC00071817 /* HelpCenterCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */; };
+		223D309E2C4AEC6000071817 /* HelpCenterHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */; };
+		223D30A02C4CD17200071817 /* UIViewController+TitleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D309F2C4CD17200071817 /* UIViewController+TitleAnimation.swift */; };
+		223D30A32C4CEC4400071817 /* HelpCenterCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30A22C4CEC4400071817 /* HelpCenterCategoryHeader.swift */; };
+		223D30A52C4CEC4C00071817 /* HelpCenterCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30A42C4CEC4C00071817 /* HelpCenterCategoryCell.swift */; };
+		223D30A72C4CED7400071817 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30A62C4CED7400071817 /* UITableView+Reusable.swift */; };
+		223D30AD2C4DDDF300071817 /* HelpCenterCategoryFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223D30AC2C4DDDF300071817 /* HelpCenterCategoryFooter.swift */; };
+		223E61162C4971FF00465130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61152C4971FF00465130 /* AppDelegate.swift */; };
+		223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61172C4971FF00465130 /* SceneDelegate.swift */; };
+		223E611F2C49720100465130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223E611E2C49720100465130 /* Assets.xcassets */; };
+		223E612D2C49720100465130 /* EstaparHelpCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E612C2C49720100465130 /* EstaparHelpCenterTests.swift */; };
+		223E61372C49720100465130 /* EstaparHelpCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61362C49720100465130 /* EstaparHelpCenterUITests.swift */; };
+		223E61392C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61382C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift */; };
+		223E61492C4977A400465130 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E61482C4977A400465130 /* Coordinator.swift */; };
+		223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E614A2C4977CA00465130 /* AppCoordinator.swift */; };
+		54155D0F01FA1AA6B42F334B /* Pods_EstaparHelpCenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6903935565F3E31AE554275 /* Pods_EstaparHelpCenterUITests.framework */; };
+		A8062E7C7C2E4EE82D9180C1 /* Pods_EstaparHelpCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E505BB9769435BF1E2F2BCFC /* Pods_EstaparHelpCenter.framework */; };
+		F9F31DD01E48C50612785BCB /* Pods_EstaparHelpCenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 163146B2BBAA89E16510D875 /* Pods_EstaparHelpCenterTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		223E61292C49720100465130 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223E610A2C4971FF00465130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 223E61112C4971FF00465130;
+			remoteInfo = EstaparHelpCenter;
+		};
+		223E61332C49720100465130 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223E610A2C4971FF00465130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 223E61112C4971FF00465130;
+			remoteInfo = EstaparHelpCenter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		163146B2BBAA89E16510D875 /* Pods_EstaparHelpCenterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstaparHelpCenterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		193475342AAEEA56CEA4FCD2 /* Pods-EstaparHelpCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterTests.release.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterTests/Pods-EstaparHelpCenterTests.release.xcconfig"; sourceTree = "<group>"; };
+		223D303B2C49847C00071817 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		223D303D2C49849000071817 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		223D30412C4984ED00071817 /* HelpCenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterService.swift; sourceTree = "<group>"; };
+		223D30432C498CC500071817 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		223D30452C498CCD00071817 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		223D30472C498CD900071817 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		223D30492C498DD300071817 /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		223D304A2C498DD300071817 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		223D304C2C498DD300071817 /* CodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		223D304D2C498DD300071817 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		223D30542C498E7600071817 /* SizePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePattern.swift; sourceTree = "<group>"; };
+		223D305D2C499B6D00071817 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		223D305E2C499B6D00071817 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		223D30602C499B6D00071817 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		223D306D2C499D8000071817 /* FontPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPattern.swift; sourceTree = "<group>"; };
+		223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCoordinator.swift; sourceTree = "<group>"; };
+		223D30722C49C96900071817 /* HelpCenterHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeView.swift; sourceTree = "<group>"; };
+		223D30742C49C97000071817 /* HelpCenterHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeViewController.swift; sourceTree = "<group>"; };
+		223D30762C49C97600071817 /* HelpCenterHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeViewModel.swift; sourceTree = "<group>"; };
+		223D30792C49CC3500071817 /* HelpCenterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterWorker.swift; sourceTree = "<group>"; };
+		223D307B2C49CCA300071817 /* HelpCenterHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeModel.swift; sourceTree = "<group>"; };
+		223D307E2C49D8F100071817 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHomeCategoryCell.swift; sourceTree = "<group>"; };
+		223D30842C49DB5100071817 /* MoyaResponse+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+Map.swift"; sourceTree = "<group>"; };
+		223D30872C4ADC8600071817 /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		223D30912C4AE50300071817 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		223D30952C4AE99A00071817 /* HelpCenterCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryView.swift; sourceTree = "<group>"; };
+		223D30972C4AE9DB00071817 /* HelpCenterCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryViewController.swift; sourceTree = "<group>"; };
+		223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryViewModel.swift; sourceTree = "<group>"; };
+		223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryModel.swift; sourceTree = "<group>"; };
+		223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterHeaderModel.swift; sourceTree = "<group>"; };
+		223D309F2C4CD17200071817 /* UIViewController+TitleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TitleAnimation.swift"; sourceTree = "<group>"; };
+		223D30A22C4CEC4400071817 /* HelpCenterCategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryHeader.swift; sourceTree = "<group>"; };
+		223D30A42C4CEC4C00071817 /* HelpCenterCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryCell.swift; sourceTree = "<group>"; };
+		223D30A62C4CED7400071817 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		223D30AC2C4DDDF300071817 /* HelpCenterCategoryFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterCategoryFooter.swift; sourceTree = "<group>"; };
+		223E61122C4971FF00465130 /* EstaparHelpCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstaparHelpCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		223E61152C4971FF00465130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		223E61172C4971FF00465130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		223E611E2C49720100465130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		223E61232C49720100465130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		223E61282C49720100465130 /* EstaparHelpCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EstaparHelpCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		223E612C2C49720100465130 /* EstaparHelpCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstaparHelpCenterTests.swift; sourceTree = "<group>"; };
+		223E61322C49720100465130 /* EstaparHelpCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EstaparHelpCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		223E61362C49720100465130 /* EstaparHelpCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstaparHelpCenterUITests.swift; sourceTree = "<group>"; };
+		223E61382C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstaparHelpCenterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		223E61482C4977A400465130 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		223E614A2C4977CA00465130 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		265FCED561AA4E75E0D5F623 /* Pods-EstaparHelpCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenter.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter.debug.xcconfig"; sourceTree = "<group>"; };
+		34C4A9312D2C1E0EB3A97C57 /* Pods-EstaparHelpCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterTests.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterTests/Pods-EstaparHelpCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69595F39979AE60313CBC01F /* Pods-EstaparHelpCenterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterUITests.release.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterUITests/Pods-EstaparHelpCenterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		701784BF7E6BBFF0213AF25F /* Pods-EstaparHelpCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenter.release.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter.release.xcconfig"; sourceTree = "<group>"; };
+		A6903935565F3E31AE554275 /* Pods_EstaparHelpCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstaparHelpCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E505BB9769435BF1E2F2BCFC /* Pods_EstaparHelpCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EstaparHelpCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F468921CF5A4D40B5D5C3094 /* Pods-EstaparHelpCenterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EstaparHelpCenterUITests.debug.xcconfig"; path = "Target Support Files/Pods-EstaparHelpCenterUITests/Pods-EstaparHelpCenterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		223E610F2C4971FF00465130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8062E7C7C2E4EE82D9180C1 /* Pods_EstaparHelpCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223E61252C49720100465130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F31DD01E48C50612785BCB /* Pods_EstaparHelpCenterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223E612F2C49720100465130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54155D0F01FA1AA6B42F334B /* Pods_EstaparHelpCenterUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		223D30362C49818D00071817 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				223D30402C4984CB00071817 /* Services */,
+				223D303A2C49846400071817 /* Setup */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		223D303A2C49846400071817 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				223D303B2C49847C00071817 /* APIProvider.swift */,
+				223D303D2C49849000071817 /* APITarget.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		223D30402C4984CB00071817 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				223D30412C4984ED00071817 /* HelpCenterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		223D304B2C498DD300071817 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				223D30492C498DD300071817 /* Loadable.swift */,
+				223D304A2C498DD300071817 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		223D304E2C498DD300071817 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				223D30582C4997A300071817 /* Patterns */,
+				223D304B2C498DD300071817 /* Loading */,
+				223D304C2C498DD300071817 /* CodeView.swift */,
+				223D304D2C498DD300071817 /* ReusableView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		223D30582C4997A300071817 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				223D306D2C499D8000071817 /* FontPattern.swift */,
+				223D30542C498E7600071817 /* SizePattern.swift */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		223D30592C499B2000071817 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				223D305E2C499B6D00071817 /* Inter-Medium.ttf */,
+				223D30602C499B6D00071817 /* Inter-SemiBold.ttf */,
+				223D305D2C499B6D00071817 /* Inter-Bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		223D30712C49C95900071817 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				223D30812C49D93800071817 /* Components */,
+				223D30722C49C96900071817 /* HelpCenterHomeView.swift */,
+				223D30742C49C97000071817 /* HelpCenterHomeViewController.swift */,
+				223D30762C49C97600071817 /* HelpCenterHomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		223D30782C49CC1900071817 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				223D309B2C4AEBBC00071817 /* HelpCenterCategoryModel.swift */,
+				223D309D2C4AEC6000071817 /* HelpCenterHeaderModel.swift */,
+				223D307B2C49CCA300071817 /* HelpCenterHomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		223D307D2C49D8DE00071817 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				223D30842C49DB5100071817 /* MoyaResponse+Map.swift */,
+				223D307E2C49D8F100071817 /* UICollectionView+Reusable.swift */,
+				223D30A62C4CED7400071817 /* UITableView+Reusable.swift */,
+				223D309F2C4CD17200071817 /* UIViewController+TitleAnimation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		223D30812C49D93800071817 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				223D30822C49D97400071817 /* HelpCenterHomeCategoryCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		223D30882C4ADC8600071817 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				223D30922C4AE50300071817 /* Localizable.strings */,
+				223D30872C4ADC8600071817 /* String+Localizable.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		223D30942C4AE97400071817 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				223D30A12C4CEC2F00071817 /* Components */,
+				223D30952C4AE99A00071817 /* HelpCenterCategoryView.swift */,
+				223D30972C4AE9DB00071817 /* HelpCenterCategoryViewController.swift */,
+				223D30992C4AE9E500071817 /* HelpCenterCategoryViewModel.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		223D30A12C4CEC2F00071817 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				223D30A42C4CEC4C00071817 /* HelpCenterCategoryCell.swift */,
+				223D30AC2C4DDDF300071817 /* HelpCenterCategoryFooter.swift */,
+				223D30A22C4CEC4400071817 /* HelpCenterCategoryHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		223E61092C4971FF00465130 = {
+			isa = PBXGroup;
+			children = (
+				223E61142C4971FF00465130 /* EstaparHelpCenter */,
+				223E612B2C49720100465130 /* EstaparHelpCenterTests */,
+				223E61352C49720100465130 /* EstaparHelpCenterUITests */,
+				223E61132C4971FF00465130 /* Products */,
+				5D6926AB3F882EBC843B2856 /* Pods */,
+				4BCD6844131B374766FA8EA2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		223E61132C4971FF00465130 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				223E61122C4971FF00465130 /* EstaparHelpCenter.app */,
+				223E61282C49720100465130 /* EstaparHelpCenterTests.xctest */,
+				223E61322C49720100465130 /* EstaparHelpCenterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		223E61142C4971FF00465130 /* EstaparHelpCenter */ = {
+			isa = PBXGroup;
+			children = (
+				223E61462C49778500465130 /* Core */,
+				223E614C2C49783400465130 /* Scenes */,
+				223E61452C49776D00465130 /* Support Files */,
+				223E61152C4971FF00465130 /* AppDelegate.swift */,
+				223E61172C4971FF00465130 /* SceneDelegate.swift */,
+			);
+			path = EstaparHelpCenter;
+			sourceTree = "<group>";
+		};
+		223E612B2C49720100465130 /* EstaparHelpCenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				223E612C2C49720100465130 /* EstaparHelpCenterTests.swift */,
+			);
+			path = EstaparHelpCenterTests;
+			sourceTree = "<group>";
+		};
+		223E61352C49720100465130 /* EstaparHelpCenterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				223E61362C49720100465130 /* EstaparHelpCenterUITests.swift */,
+				223E61382C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift */,
+			);
+			path = EstaparHelpCenterUITests;
+			sourceTree = "<group>";
+		};
+		223E61452C49776D00465130 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				223D30592C499B2000071817 /* Font */,
+				223E611E2C49720100465130 /* Assets.xcassets */,
+				223E61232C49720100465130 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		223E61462C49778500465130 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				223D30362C49818D00071817 /* API */,
+				223E61472C49778A00465130 /* Coordinator */,
+				223D307D2C49D8DE00071817 /* Extensions */,
+				223D30882C4ADC8600071817 /* Strings */,
+				223D304E2C498DD300071817 /* UI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		223E61472C49778A00465130 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				223E614A2C4977CA00465130 /* AppCoordinator.swift */,
+				223E61482C4977A400465130 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		223E614C2C49783400465130 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				223E614E2C49785F00465130 /* HelpCenter */,
+				223E614D2C49785900465130 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		223E614D2C49785900465130 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				223D30432C498CC500071817 /* HomeCoordinator.swift */,
+				223D30452C498CCD00071817 /* HomeView.swift */,
+				223D30472C498CD900071817 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		223E614E2C49785F00465130 /* HelpCenter */ = {
+			isa = PBXGroup;
+			children = (
+				223D30942C4AE97400071817 /* Category */,
+				223D30782C49CC1900071817 /* Models */,
+				223D30712C49C95900071817 /* Home */,
+				223D306F2C49A67200071817 /* HelpCenterCoordinator.swift */,
+				223D30792C49CC3500071817 /* HelpCenterWorker.swift */,
+			);
+			path = HelpCenter;
+			sourceTree = "<group>";
+		};
+		4BCD6844131B374766FA8EA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E505BB9769435BF1E2F2BCFC /* Pods_EstaparHelpCenter.framework */,
+				163146B2BBAA89E16510D875 /* Pods_EstaparHelpCenterTests.framework */,
+				A6903935565F3E31AE554275 /* Pods_EstaparHelpCenterUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D6926AB3F882EBC843B2856 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				265FCED561AA4E75E0D5F623 /* Pods-EstaparHelpCenter.debug.xcconfig */,
+				701784BF7E6BBFF0213AF25F /* Pods-EstaparHelpCenter.release.xcconfig */,
+				34C4A9312D2C1E0EB3A97C57 /* Pods-EstaparHelpCenterTests.debug.xcconfig */,
+				193475342AAEEA56CEA4FCD2 /* Pods-EstaparHelpCenterTests.release.xcconfig */,
+				F468921CF5A4D40B5D5C3094 /* Pods-EstaparHelpCenterUITests.debug.xcconfig */,
+				69595F39979AE60313CBC01F /* Pods-EstaparHelpCenterUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		223E61112C4971FF00465130 /* EstaparHelpCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 223E613C2C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenter" */;
+			buildPhases = (
+				716FF1111B14B7FFF3DBB082 /* [CP] Check Pods Manifest.lock */,
+				223E610E2C4971FF00465130 /* Sources */,
+				223E610F2C4971FF00465130 /* Frameworks */,
+				223E61102C4971FF00465130 /* Resources */,
+				4E0357330196DA92942E273A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EstaparHelpCenter;
+			productName = EstaparHelpCenter;
+			productReference = 223E61122C4971FF00465130 /* EstaparHelpCenter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		223E61272C49720100465130 /* EstaparHelpCenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 223E613F2C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenterTests" */;
+			buildPhases = (
+				F7110DA521BA1258CB76AB0D /* [CP] Check Pods Manifest.lock */,
+				223E61242C49720100465130 /* Sources */,
+				223E61252C49720100465130 /* Frameworks */,
+				223E61262C49720100465130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				223E612A2C49720100465130 /* PBXTargetDependency */,
+			);
+			name = EstaparHelpCenterTests;
+			productName = EstaparHelpCenterTests;
+			productReference = 223E61282C49720100465130 /* EstaparHelpCenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		223E61312C49720100465130 /* EstaparHelpCenterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 223E61422C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenterUITests" */;
+			buildPhases = (
+				6BD33A2D59465C4843E40AF4 /* [CP] Check Pods Manifest.lock */,
+				223E612E2C49720100465130 /* Sources */,
+				223E612F2C49720100465130 /* Frameworks */,
+				223E61302C49720100465130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				223E61342C49720100465130 /* PBXTargetDependency */,
+			);
+			name = EstaparHelpCenterUITests;
+			productName = EstaparHelpCenterUITests;
+			productReference = 223E61322C49720100465130 /* EstaparHelpCenterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		223E610A2C4971FF00465130 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					223E61112C4971FF00465130 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					223E61272C49720100465130 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 223E61112C4971FF00465130;
+					};
+					223E61312C49720100465130 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 223E61112C4971FF00465130;
+					};
+				};
+			};
+			buildConfigurationList = 223E610D2C4971FF00465130 /* Build configuration list for PBXProject "EstaparHelpCenter" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "pt-BR";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				"pt-BR",
+			);
+			mainGroup = 223E61092C4971FF00465130;
+			productRefGroup = 223E61132C4971FF00465130 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				223E61112C4971FF00465130 /* EstaparHelpCenter */,
+				223E61272C49720100465130 /* EstaparHelpCenterTests */,
+				223E61312C49720100465130 /* EstaparHelpCenterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		223E61102C4971FF00465130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223D30932C4AE50300071817 /* Localizable.strings in Resources */,
+				223D30662C499B6D00071817 /* Inter-Bold.ttf in Resources */,
+				223D30672C499B6D00071817 /* Inter-Medium.ttf in Resources */,
+				223D30692C499B6D00071817 /* Inter-SemiBold.ttf in Resources */,
+				223E611F2C49720100465130 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223E61262C49720100465130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223E61302C49720100465130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E0357330196DA92942E273A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EstaparHelpCenter/Pods-EstaparHelpCenter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BD33A2D59465C4843E40AF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EstaparHelpCenterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		716FF1111B14B7FFF3DBB082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EstaparHelpCenter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7110DA521BA1258CB76AB0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EstaparHelpCenterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		223E610E2C4971FF00465130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223D30AD2C4DDDF300071817 /* HelpCenterCategoryFooter.swift in Sources */,
+				223D30702C49A67200071817 /* HelpCenterCoordinator.swift in Sources */,
+				223D30462C498CCD00071817 /* HomeView.swift in Sources */,
+				223D309A2C4AE9E500071817 /* HelpCenterCategoryViewModel.swift in Sources */,
+				223D30832C49D97400071817 /* HelpCenterHomeCategoryCell.swift in Sources */,
+				223D30422C4984ED00071817 /* HelpCenterService.swift in Sources */,
+				223E614B2C4977CA00465130 /* AppCoordinator.swift in Sources */,
+				223E61162C4971FF00465130 /* AppDelegate.swift in Sources */,
+				223D30552C498E7600071817 /* SizePattern.swift in Sources */,
+				223D303C2C49847C00071817 /* APIProvider.swift in Sources */,
+				223D30522C498DD300071817 /* ReusableView.swift in Sources */,
+				223D30852C49DB5100071817 /* MoyaResponse+Map.swift in Sources */,
+				223D30A32C4CEC4400071817 /* HelpCenterCategoryHeader.swift in Sources */,
+				223D30502C498DD300071817 /* LoadingView.swift in Sources */,
+				223D30512C498DD300071817 /* CodeView.swift in Sources */,
+				223D30A02C4CD17200071817 /* UIViewController+TitleAnimation.swift in Sources */,
+				223D30A52C4CEC4C00071817 /* HelpCenterCategoryCell.swift in Sources */,
+				223D30482C498CD900071817 /* HomeViewController.swift in Sources */,
+				223D306E2C499D8000071817 /* FontPattern.swift in Sources */,
+				223D307C2C49CCA300071817 /* HelpCenterHomeModel.swift in Sources */,
+				223D307A2C49CC3500071817 /* HelpCenterWorker.swift in Sources */,
+				223D30A72C4CED7400071817 /* UITableView+Reusable.swift in Sources */,
+				223E61492C4977A400465130 /* Coordinator.swift in Sources */,
+				223D30962C4AE99A00071817 /* HelpCenterCategoryView.swift in Sources */,
+				223D30442C498CC500071817 /* HomeCoordinator.swift in Sources */,
+				223D30982C4AE9DB00071817 /* HelpCenterCategoryViewController.swift in Sources */,
+				223D30752C49C97000071817 /* HelpCenterHomeViewController.swift in Sources */,
+				223D30772C49C97600071817 /* HelpCenterHomeViewModel.swift in Sources */,
+				223D30732C49C96900071817 /* HelpCenterHomeView.swift in Sources */,
+				223D304F2C498DD300071817 /* Loadable.swift in Sources */,
+				223D309E2C4AEC6000071817 /* HelpCenterHeaderModel.swift in Sources */,
+				223D308A2C4ADC8600071817 /* String+Localizable.swift in Sources */,
+				223D307F2C49D8F100071817 /* UICollectionView+Reusable.swift in Sources */,
+				223E61182C4971FF00465130 /* SceneDelegate.swift in Sources */,
+				223D303E2C49849000071817 /* APITarget.swift in Sources */,
+				223D309C2C4AEBBC00071817 /* HelpCenterCategoryModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223E61242C49720100465130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223E612D2C49720100465130 /* EstaparHelpCenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		223E612E2C49720100465130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223E61372C49720100465130 /* EstaparHelpCenterUITests.swift in Sources */,
+				223E61392C49720100465130 /* EstaparHelpCenterUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		223E612A2C49720100465130 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 223E61112C4971FF00465130 /* EstaparHelpCenter */;
+			targetProxy = 223E61292C49720100465130 /* PBXContainerItemProxy */;
+		};
+		223E61342C49720100465130 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 223E61112C4971FF00465130 /* EstaparHelpCenter */;
+			targetProxy = 223E61332C49720100465130 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		223D30922C4AE50300071817 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				223D30912C4AE50300071817 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		223E613A2C49720100465130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		223E613B2C49720100465130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		223E613D2C49720100465130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265FCED561AA4E75E0D5F623 /* Pods-EstaparHelpCenter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EstaparHelpCenter/Support Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Zul+";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wnhirsch.EstaparHelpCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		223E613E2C49720100465130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 701784BF7E6BBFF0213AF25F /* Pods-EstaparHelpCenter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EstaparHelpCenter/Support Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Zul+";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wnhirsch.EstaparHelpCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		223E61402C49720100465130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C4A9312D2C1E0EB3A97C57 /* Pods-EstaparHelpCenterTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wnhirsch.EstaparHelpCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EstaparHelpCenter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EstaparHelpCenter";
+			};
+			name = Debug;
+		};
+		223E61412C49720100465130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193475342AAEEA56CEA4FCD2 /* Pods-EstaparHelpCenterTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wnhirsch.EstaparHelpCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EstaparHelpCenter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EstaparHelpCenter";
+			};
+			name = Release;
+		};
+		223E61432C49720100465130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F468921CF5A4D40B5D5C3094 /* Pods-EstaparHelpCenterUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wnhirsch.EstaparHelpCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = EstaparHelpCenter;
+			};
+			name = Debug;
+		};
+		223E61442C49720100465130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69595F39979AE60313CBC01F /* Pods-EstaparHelpCenterUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BC293Z6NF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wnhirsch.EstaparHelpCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = EstaparHelpCenter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		223E610D2C4971FF00465130 /* Build configuration list for PBXProject "EstaparHelpCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223E613A2C49720100465130 /* Debug */,
+				223E613B2C49720100465130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		223E613C2C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223E613D2C49720100465130 /* Debug */,
+				223E613E2C49720100465130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		223E613F2C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223E61402C49720100465130 /* Debug */,
+				223E61412C49720100465130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		223E61422C49720100465130 /* Build configuration list for PBXNativeTarget "EstaparHelpCenterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223E61432C49720100465130 /* Debug */,
+				223E61442C49720100465130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 223E610A2C4971FF00465130 /* Project object */;
+}

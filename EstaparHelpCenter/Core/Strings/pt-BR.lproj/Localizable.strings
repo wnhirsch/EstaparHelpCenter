@@ -1,0 +1,18 @@
+// MARK: - Error
+"error.title" = "Erro";
+"error.message" = "Houve um problema ao carregar os dados.";
+"error.tryAgain" = "Tentar novamente";
+"error.cancel" = "Cancelar";
+
+// MARK: - Home
+"home.button" = "Abrir Central de Ajuda";
+
+// MARK: - HelpCenterHome
+"helpcenter.home.title" = "Central de Ajuda";
+"helpcenter.home.articles" = "%d artigos";
+"helpcenter.home.empty" = "Nenhuma categoria encontrada";
+
+// MARK: - HelpCenterCategory
+"helpcenter.category.title" = "Perguntas frequentes";
+"helpcenter.category.search" = "Pesquisar";
+"helpcenter.category.empty" = "Nenhum artigo encontrado";
