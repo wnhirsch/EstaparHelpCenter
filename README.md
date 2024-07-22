@@ -35,22 +35,22 @@ Em resumo, todas as frameworks utilizadas são ferramentas que eliminam a comple
 
 Foi utilizado a arquitetura **MVVM-C** (Model, View, ViewModel e Coordinator) para a construção do projeto. Os `Coordinators` foram extremamente úteis para remover da `ViewController` as operações de transição, ainda mais com o uso de Modal. Com essa arquitetura, a hierarquia de arquivos do projeto ficou da seguinte forma:
 
-- Core: Diretório contendo todos os principais arquivos base do projeto.
-	- API: Diretório contendo configurações de Rede.
-	- Strings: Diretório contendo o dicionário de textos do App.
-	- Extensions: Diretório contendo extensão de tipos já existentes para facilitar o nosso contexto.
-	- UI: Diretório contendo componentes genéricos do projeto, não pertencentes a nenhum fluxo fixo.
-- Scenes: Diretório com todos os fluxos do App.
-	- *"Fluxo"*: Diretório com todas as telas e classes gerais de um fluxo.
-		- Models: Diretório contendo todos os modelos/estruturas de dados usadas nesse fluxo.
-		- *"Tela"*: Diretório que representa uma tela de um fluxo.
-			- *"TelaView"*: A classe que constroi uma tela programaticamente com *ViewCode*.
-			- *"TelaViewModel"*: A classe que gerencia os dados a serem injetados e usados nessa tela.
-			- *"TelaViewController"*: A classe de controle que gerencia a comunicação entre o construtor da tela e o gerenciador de dados (View e ViewModel).
-			- *"Components"*: Diretório opicional que aparece contendo outros construtores por *ViewCode* de itens que aparecem somente na *"TelaView"*, facilitando a abstração e manutenção por quebrar a *"TelaView"* em porções menores.
-		- *"FluxoCoordinator"*: `Coordinator` do fluxo que gerencia todo redirecionamento desse fluxo intera e externamente.
-		- *"FluxoWorker"*: Classe com a definição de todas as requisições de API desse fluxo.
-- Support Files: Diretório com arquivos extras como repositório de Assets e Fontes.
+- **Core**: Diretório contendo todos os principais arquivos base do projeto.
+	- **API**: Diretório contendo configurações de Rede.
+	- **Strings**: Diretório contendo o dicionário de textos do App.
+	- **Extensions**: Diretório contendo extensão de tipos já existentes para facilitar o nosso contexto.
+	- **UI**: Diretório contendo componentes genéricos do projeto, não pertencentes a nenhum fluxo fixo.
+- **Scenes**: Diretório com todos os fluxos do App.
+	- **"Fluxo"**: Diretório com todas as telas e classes gerais de um fluxo.
+		- **Models**: Diretório contendo todos os modelos/estruturas de dados usadas nesse fluxo.
+		- **"Tela"**: Diretório que representa uma tela de um fluxo.
+			- **"TelaView"**: A classe que constroi uma tela programaticamente com *ViewCode*.
+			- **"TelaViewModel"**: A classe que gerencia os dados a serem injetados e usados nessa tela.
+			- **"TelaViewController"**: A classe de controle que gerencia a comunicação entre o construtor da tela e o gerenciador de dados (View e ViewModel).
+			- **"Components"**: Diretório opicional que aparece contendo outros construtores por *ViewCode* de itens que aparecem somente na **"TelaView"**, facilitando a abstração e manutenção por quebrar a **"TelaView"** em porções menores.
+		- **"FluxoCoordinator"**: `Coordinator` do fluxo que gerencia todo redirecionamento desse fluxo intera e externamente.
+		- **"FluxoWorker"**: Classe com a definição de todas as requisições de API desse fluxo.
+- **Support Files**: Diretório com arquivos extras como repositório de Assets e Fontes.
 
 ## Home do App
 
