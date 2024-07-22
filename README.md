@@ -47,7 +47,7 @@ Foi utilizado a arquitetura **MVVM-C** (Model, View, ViewModel e Coordinator) pa
 			- **"TelaView"**: A classe que constroi uma tela programaticamente com *ViewCode*.
 			- **"TelaViewModel"**: A classe que gerencia os dados a serem injetados e usados nessa tela.
 			- **"TelaViewController"**: A classe de controle que gerencia a comunicação entre o construtor da tela e o gerenciador de dados (View e ViewModel).
-			- **"Components"**: Diretório opicional que aparece contendo outros construtores por *ViewCode* de itens que aparecem somente na **"TelaView"**, facilitando a abstração e manutenção por quebrar a **"TelaView"** em porções menores.
+			- **Components**: Diretório opicional que aparece contendo outros construtores por *ViewCode* de itens que aparecem somente na **"TelaView"**, facilitando a abstração e manutenção por quebrar a **"TelaView"** em porções menores.
 		- **"FluxoCoordinator"**: `Coordinator` do fluxo que gerencia todo redirecionamento desse fluxo intera e externamente.
 		- **"FluxoWorker"**: Classe com a definição de todas as requisições de API desse fluxo.
 - **Support Files**: Diretório com arquivos extras como repositório de Assets e Fontes.
