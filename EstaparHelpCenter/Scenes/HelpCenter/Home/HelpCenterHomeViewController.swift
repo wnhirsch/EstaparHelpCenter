@@ -13,6 +13,7 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
     private let contentView: HelpCenterHomeView
     private let viewModel: HelpCenterHomeViewModel
     
+    private var isOnBackground = false
     private var cancellables = Set<AnyCancellable>()
 
     init(viewModel: HelpCenterHomeViewModel) {
@@ -39,8 +40,21 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isOnBackground {
+            setTitleWithFade("helpcenter.home.title".localized)
+            
+            contentView.animateTransition(isAppearing: true) { [weak self] in
+                guard let self = self else { return }
+                self.isOnBackground = false
+            }
+        }
+    }
+    
     private func setupNavigationBar() {
-        title = "helpcenter.home.title".localized
+        setTitleWithFade("helpcenter.home.title".localized)
+        
         if let navigationBar = navigationController?.navigationBar {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.backgroundColor = .estaparPrimary
@@ -104,16 +118,14 @@ class HelpCenterHomeViewController: UIViewController, Loadable {
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension HelpCenterHomeViewController: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
+        contentView.showEmptyListMessage(shouldAppear: viewModel.categories.isEmpty)
         return viewModel.categories.count
     }
     
@@ -130,13 +142,21 @@ extension HelpCenterHomeViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension HelpCenterHomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.goToCategory(index: indexPath.row)
+        setTitleWithFade(nil) // Hide navigation title
+        
+        contentView.animateTransition(isAppearing: isOnBackground) { [weak self] in
+            guard let self = self else { return }
+            self.isOnBackground = true
+            self.viewModel.goToCategory(index: indexPath.row)
+        }
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension HelpCenterHomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(
@@ -157,6 +177,7 @@ extension HelpCenterHomeViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - UIScrollViewDelegate
 extension HelpCenterHomeViewController {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

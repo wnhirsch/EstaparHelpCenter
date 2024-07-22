@@ -5,19 +5,10 @@
 //  Created by Wellington Nascente Hirsch on 18/07/24.
 //
 
-import Combine
 import SnapKit
 import UIKit
 
 class HelpCenterHomeCategoryCell: UICollectionViewCell, CodeView {
-    
-    private lazy var cardView: UIView = {
-        let view = UIView()
-        view.layer.borderColor = UIColor.estaparSecondaryGray.cgColor
-        view.layer.borderWidth = .size2
-        view.layer.cornerRadius = .size10
-        return view
-    }()
     
     private lazy var cardStackView: UIStackView = {
         let stackView = UIStackView()
@@ -68,9 +59,7 @@ class HelpCenterHomeCategoryCell: UICollectionViewCell, CodeView {
     }
     
     func buildViewHierarchy() {
-        addSubview(cardView)
-        
-        cardView.addSubview(cardStackView)
+        contentView.addSubview(cardStackView)
         
         cardStackView.addArrangedSubview(titleLabel)
         cardStackView.addArrangedSubview(footerStackView)
@@ -80,12 +69,6 @@ class HelpCenterHomeCategoryCell: UICollectionViewCell, CodeView {
     }
     
     func setupConstraints() {
-        cardView.snp.makeConstraints { (make) -> Void in
-            make.top.equalToSuperview()
-            make.horizontalEdges.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
-        
         cardStackView.snp.makeConstraints { (make) -> Void in
             make.edges.equalToSuperview().inset(CGFloat.size15)
         }
@@ -97,6 +80,9 @@ class HelpCenterHomeCategoryCell: UICollectionViewCell, CodeView {
     
     func setupAdditionalConfiguration() {
         backgroundColor = .estaparWhite
+        layer.borderColor = UIColor.estaparSecondaryGray.cgColor
+        layer.borderWidth = .size2
+        layer.cornerRadius = .size10
     }
     
     func setup(model: HelpCenterHomeModel.Category) {

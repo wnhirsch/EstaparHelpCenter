@@ -19,6 +19,7 @@ class HelpCenterHomeViewModel {
     @Published var line1: String = ""
     @Published var line2: String = ""
     @Published var categories = [HelpCenterHomeModel.Category]()
+    
     @Published var isLoading: Bool = false
 
     init(coordinator: HelpCenterCoordinator, worker: HelpCenterWorker = .init()) {
@@ -60,7 +61,7 @@ class HelpCenterHomeViewModel {
         })
     }
     
-    private func setImageURL(newValue: HelpCenterHomeModel.Header.ImageSizes) {
+    private func setImageURL(newValue: HelpCenterHeaderModel.ImageSizes) {
         if newValue.size3.isEmpty {
             if newValue.size2.isEmpty {
                 if newValue.size2.isEmpty {
