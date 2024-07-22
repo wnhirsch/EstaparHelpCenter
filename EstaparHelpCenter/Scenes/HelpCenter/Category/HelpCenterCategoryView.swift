@@ -65,15 +65,14 @@ class HelpCenterCategoryView: UIView, CodeView {
     }()
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(HelpCenterCategorySection.self)
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(HelpCenterCategoryCell.self)
         tableView.backgroundColor = .estaparWhite
-        tableView.isScrollEnabled = true
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = .size50
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = .size50
         tableView.separatorStyle = .none
         tableView.contentInset = .init(
             top: .size15 + .size10, // Trick to see the cards passing behind the search field
@@ -82,6 +81,17 @@ class HelpCenterCategoryView: UIView, CodeView {
             right: .zero
         )
         return tableView
+    }()
+    
+    private lazy var emptyListLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.estaparMedium(size: .font14)
+        label.textColor = .estaparPrimaryGray
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.text = "helpcenter.category.empty".localized
+        label.alpha = 0
+        return label
     }()
     
     init() {
@@ -99,6 +109,7 @@ class HelpCenterCategoryView: UIView, CodeView {
         roundedView.addSubview(titleLabel)
         roundedView.addSubview(tableView)
         roundedView.addSubview(searchField)
+        roundedView.addSubview(emptyListLabel)
     }
     
     func setupConstraints() {
@@ -124,6 +135,11 @@ class HelpCenterCategoryView: UIView, CodeView {
             make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
             make.bottom.equalToSuperview()
         }
+        
+        emptyListLabel.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(searchField.snp.bottom).offset(CGFloat.size20)
+            make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
+        }
     }
     
     func setupAdditionalConfiguration() {
@@ -146,6 +162,7 @@ class HelpCenterCategoryView: UIView, CodeView {
                 self.titleLabel.alpha = 0
                 self.searchField.alpha = 0
                 self.tableView.alpha = 0
+                self.emptyListLabel.alpha = 0
             } completion: { _ in completion?() }
         }
     }
@@ -158,6 +175,18 @@ class HelpCenterCategoryView: UIView, CodeView {
         } else {
             UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
                 self.searchField.layer.borderColor = UIColor.clear.cgColor
+            }
+        }
+    }
+    
+    func showEmptyListMessage(shouldAppear: Bool) {
+        if shouldAppear {
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.emptyListLabel.alpha = 1
+            }
+        } else {
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.emptyListLabel.alpha = 0
             }
         }
     }

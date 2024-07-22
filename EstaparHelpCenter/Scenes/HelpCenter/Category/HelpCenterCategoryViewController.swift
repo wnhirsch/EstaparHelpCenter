@@ -110,7 +110,13 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                self.contentView.tableView.reloadData()
+                UIView.transition(
+                    with: self.contentView.tableView,
+                    duration: .alpha30,
+                    options: .transitionCrossDissolve
+                ) {
+                    self.contentView.tableView.reloadData()
+                }
         }.store(in: &cancellables)
         
         // First API call
@@ -134,6 +140,18 @@ class HelpCenterCategoryViewController: UIViewController, Loadable {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    @objc func sectionHeaderTapped(sender: UITapGestureRecognizer) {
+        guard let headerView = sender.view as? HelpCenterCategoryHeader else { return }
+        viewModel.toggleSection(at: headerView.tag)
+        UIView.transition(
+            with: contentView.tableView,
+            duration: .alpha30,
+            options: .transitionCrossDissolve
+        ) {
+            self.contentView.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - UITextFieldDelegate
@@ -152,7 +170,11 @@ extension HelpCenterCategoryViewController: UITextFieldDelegate {
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textField(
+        _ textField: UITextField,
+        shouldChangeCharactersIn range: NSRange,
+        replacementString string: String
+    ) -> Bool {
         var newFilter = textField.text ?? ""
         let firstIndex = newFilter.index(newFilter.startIndex, offsetBy: range.lowerBound)
         let lastIndex = newFilter.index(newFilter.startIndex, offsetBy: range.upperBound)
@@ -166,28 +188,75 @@ extension HelpCenterCategoryViewController: UITextFieldDelegate {
 // MARK: - UITableViewDataSource
 extension HelpCenterCategoryViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        contentView.showEmptyListMessage(shouldAppear: viewModel.filteredSections.isEmpty)
         return viewModel.filteredSections.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(HelpCenterCategorySection.self, for: indexPath)
-        cell.setup(
-            model: viewModel.filteredSections[indexPath.row],
-            isFiltering: viewModel.isFiltering
-        )
-        return cell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if viewModel.isSectionHidden(at: section) {
+            return .zero
+        }
+        return viewModel.filteredSections[section].items.count
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        <#code#>
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(HelpCenterCategoryCell.self, for: indexPath)
+        cell.setup(model: viewModel.filteredSections[indexPath.section].items[indexPath.row])
+        return cell
     }
 }
 
 // MARK: - UITableViewDelegate
 extension HelpCenterCategoryViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.beginUpdates()
-        tableView.endUpdates()
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = HelpCenterCategoryHeader()
+        headerView.setup(
+            index: section,
+            model: viewModel.filteredSections[section],
+            isExpanded: !viewModel.isSectionHidden(at: section)
+        )
+        
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(sectionHeaderTapped(sender:))
+        )
+        tapGesture.cancelsTouchesInView = false
+        headerView.isUserInteractionEnabled = true
+        headerView.addGestureRecognizer(tapGesture)
+        
+        return headerView
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        willDisplayHeaderView view: UIView,
+        forSection section: Int
+    ) {
+        guard let headerView = view as? HelpCenterCategoryHeader else { return }
+        headerView.setupBorder()
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        willDisplay cell: UITableViewCell,
+        forRowAt indexPath: IndexPath
+    ) {
+        guard let cellView = cell as? HelpCenterCategoryCell else { return }
+        cellView.setupBorder()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return HelpCenterCategoryFooter()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .size15 + .size15 // Height + Margin
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        guard let footerView = view as? HelpCenterCategoryFooter else { return }
+        footerView.setupBorder()
     }
 }

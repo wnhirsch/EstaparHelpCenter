@@ -125,6 +125,7 @@ extension HelpCenterHomeViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
+        contentView.showEmptyListMessage(shouldAppear: viewModel.categories.isEmpty)
         return viewModel.categories.count
     }
     

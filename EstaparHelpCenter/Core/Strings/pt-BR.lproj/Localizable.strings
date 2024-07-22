@@ -10,9 +10,9 @@
 // MARK: - HelpCenterHome
 "helpcenter.home.title" = "Central de Ajuda";
 "helpcenter.home.articles" = "%d artigos";
+"helpcenter.home.empty" = "Nenhuma categoria encontrada";
 
 // MARK: - HelpCenterCategory
 "helpcenter.category.title" = "Perguntas frequentes";
 "helpcenter.category.search" = "Pesquisar";
-
-
+"helpcenter.category.empty" = "Nenhum artigo encontrado";

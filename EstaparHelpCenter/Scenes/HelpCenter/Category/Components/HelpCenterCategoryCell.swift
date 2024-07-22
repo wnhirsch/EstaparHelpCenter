@@ -54,7 +54,7 @@ class HelpCenterCategoryCell: UITableViewCell, CodeView {
     func setupConstraints() {
         stackView.snp.makeConstraints { (make) -> Void in
             make.top.equalToSuperview().offset(CGFloat.size15)
-            make.horizontalEdges.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(CGFloat.size15)
             make.bottom.equalToSuperview()
         }
         
@@ -71,5 +71,27 @@ class HelpCenterCategoryCell: UITableViewCell, CodeView {
     
     func setup(model: HelpCenterCategoryModel.Section.Article) {
         titleLabel.text = model.title
+    }
+    
+    func setupBorder() {
+        let lineWidth: CGFloat = .size2
+        
+        let path = UIBezierPath()
+        path.move(to: .zero)
+        path.addLine(to: .init(x: .zero, y: frame.height))
+        
+        let leftShape = CAShapeLayer()
+        leftShape.position = .init(x: lineWidth / 2, y: .zero)
+        leftShape.strokeColor = UIColor.estaparSecondaryGray.cgColor
+        leftShape.lineWidth = lineWidth
+        leftShape.path = path.cgPath
+        layer.addSublayer(leftShape)
+        
+        let rightShape = CAShapeLayer()
+        rightShape.position = .init(x: frame.width - lineWidth / 2, y: .zero)
+        rightShape.strokeColor = UIColor.estaparSecondaryGray.cgColor
+        rightShape.lineWidth = lineWidth
+        rightShape.path = path.cgPath
+        layer.addSublayer(rightShape)
     }
 }

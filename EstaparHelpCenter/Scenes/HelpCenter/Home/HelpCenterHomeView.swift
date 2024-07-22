@@ -56,6 +56,17 @@ class HelpCenterHomeView: UIView, CodeView {
         return collectionView
     }()
     
+    private lazy var emptyListLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.estaparMedium(size: .font14)
+        label.textColor = .estaparPrimaryGray
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.text = "helpcenter.home.empty".localized
+        label.alpha = 0
+        return label
+    }()
+    
     private let minimumHeaderHeight: CGFloat = .size100
     private let maximumHeaderHeight: CGFloat = .size200
     
@@ -78,6 +89,7 @@ class HelpCenterHomeView: UIView, CodeView {
         addSubview(roundedView)
         
         roundedView.addSubview(collectionView)
+        roundedView.addSubview(emptyListLabel)
     }
     
     func setupConstraints() {
@@ -107,6 +119,11 @@ class HelpCenterHomeView: UIView, CodeView {
             make.top.equalToSuperview()
             make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
             make.bottom.equalToSuperview().inset(CGFloat.size20)
+        }
+        
+        emptyListLabel.snp.makeConstraints { (make) -> Void in
+            make.top.equalToSuperview().offset(CGFloat.size20)
+            make.horizontalEdges.equalToSuperview().inset(CGFloat.size20)
         }
     }
     
@@ -223,9 +240,22 @@ class HelpCenterHomeView: UIView, CodeView {
                 self.line1Label.alpha = 0
                 self.line2Label.alpha = 0
                 self.collectionView.alpha = 0
+                self.emptyListLabel.alpha = 0
                 
                 self.layoutIfNeeded()
             } completion: { _ in completion?() }
+        }
+    }
+    
+    func showEmptyListMessage(shouldAppear: Bool) {
+        if shouldAppear {
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.emptyListLabel.alpha = 1
+            }
+        } else {
+            UIView.animate(withDuration: .alpha30, delay: .zero, options: .curveEaseOut) {
+                self.emptyListLabel.alpha = 0
+            }
         }
     }
 }

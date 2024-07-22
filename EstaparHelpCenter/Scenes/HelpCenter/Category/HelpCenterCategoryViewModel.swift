@@ -15,7 +15,9 @@ class HelpCenterCategoryViewModel {
     
     @Published var title: String = ""
     @Published var filteredSections = [HelpCenterCategoryModel.Section]()
+    
     private var sections = [HelpCenterCategoryModel.Section]()
+    private var hiddenSections = [Int]()
     
     @Published var isFiltering: Bool = false
     @Published var isLoading: Bool = false
@@ -40,6 +42,7 @@ class HelpCenterCategoryViewModel {
             self.title = model.title
             self.sections = model.items
             self.filteredSections = model.items
+            self.hiddenSections = Array(0..<model.items.count)
             // Finish loading
             self.isLoading = false
         } failure: { [weak self] in
@@ -70,18 +73,24 @@ class HelpCenterCategoryViewModel {
         // Get the original value from the API
         var filteredSections = self.sections
         // Clean the typed text and transform it in an array of words
+        // Example: "  ConStelaçÃo   hOjE  " -> ["constelacao", "hoje"]
         let filterWords = text.lowercased()
-                              .trimmingCharacters(in: .whitespacesAndNewlines)
-                              .components(separatedBy: .whitespacesAndNewlines)
+                            .folding(options: .diacriticInsensitive, locale: .current)
+                            .trimmingCharacters(in: .whitespacesAndNewlines)
+                            .components(separatedBy: .whitespacesAndNewlines)
         
-        // For each section...
+        // For each section...S
         for sectionIndex in filteredSections.indices.reversed() {
             let articles = filteredSections[sectionIndex].items
             
             // and for each article in a section...
             for articleIndex in articles.indices.reversed() {
-                // Get all the words of its title
-                let articleWords = articles[articleIndex].title.components(separatedBy: .whitespacesAndNewlines)
+                // Get all the words of its title clening with the same logic of the filter
+                let articleWords = articles[articleIndex].title
+                                    .lowercased()
+                                    .folding(options: .diacriticInsensitive, locale: .current)
+                                    .trimmingCharacters(in: .whitespacesAndNewlines)
+                                    .components(separatedBy: .whitespacesAndNewlines)
                 // We assume that has a match
                 var hasMatch = true
                 
@@ -91,7 +100,7 @@ class HelpCenterCategoryViewModel {
                     // If not, we stop the search and decide that it is not a match
                     // This because we need that all the words typed by the user exists as a prefix
                     // in the article, all of them
-                    if !articleWords.contains(where: { $0.lowercased().hasPrefix(word) }) {
+                    if !articleWords.contains(where: { $0.hasPrefix(word) }) {
                         hasMatch = false
                         break
                     }
@@ -110,7 +119,20 @@ class HelpCenterCategoryViewModel {
         }
         
         // At the end, send the result to te table view
+        self.hiddenSections.removeAll()
         self.filteredSections = filteredSections
+    }
+    
+    func isSectionHidden(at index: Int) -> Bool {
+        return hiddenSections.contains(index)
+    }
+    
+    func toggleSection(at index: Int) {
+        if isSectionHidden(at: index) {
+            hiddenSections.removeAll { $0 == index }
+        } else {
+            hiddenSections.append(index)
+        }
     }
     
     func goBackToHome() {
